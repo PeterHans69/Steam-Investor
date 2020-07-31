@@ -24,6 +24,7 @@ namespace Steam_Investor_App
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
 
         

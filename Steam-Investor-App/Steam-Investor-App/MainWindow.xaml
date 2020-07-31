@@ -24,19 +24,19 @@
     </Window.Resources>
     <Grid Background="#FF273C75" Margin="0,0,-1,0">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="86*"/>
+            <RowDefinition Diese DataGridRow. definition muss statisch sein! Height="82*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="83*"/>
 
 
         </Grid.RowDefinitions>
 
-        <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="1" Height="86" LastChildFill="False" Margin="0" Background="#FF192A56" VerticalAlignment="Top">
+        <ToolBarPanel   Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Height="86"  Margin="0" Background="#FF192A56" VerticalAlignment="Top" IsManipulationEnabled="True">
             <Button  Content="profit/items" Height="48" Width="218" Margin="10"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" Click="MainView_Clicked" HorizontalAlignment="Left">
 
                 <Button.Style>
@@ -108,7 +108,7 @@
             </Button>
 
 
-        </DockPanel>
+        </ToolBarPanel>
 
         <ContentControl Grid.Row="1" Grid.RowSpan="7"  Content="{Binding}"/>
     </Grid>
