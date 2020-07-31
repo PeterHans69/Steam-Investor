@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steam-Investor-App", "Steam-Investor-App\Steam-Investor-App.csproj", "{7D541AC5-E822-4EF0-BA7E-F680000E7EBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D541AC5-E822-4EF0-BA7E-F680000E7EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D541AC5-E822-4EF0-BA7E-F680000E7EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D541AC5-E822-4EF0-BA7E-F680000E7EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D541AC5-E822-4EF0-BA7E-F680000E7EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7E153F2-CE77-4D2B-9E53-8D8F1E26FE2E}
+	EndGlobalSection
+EndGlobal
