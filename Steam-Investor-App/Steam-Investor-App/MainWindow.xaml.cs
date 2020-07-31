@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Steam_Investor_App.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,9 +26,21 @@ namespace Steam_Investor_App
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        
 
+        private void MainView_Clicked(object sender, RoutedEventArgs e)
+        {
+            DataContext = new MainViewModel();
+        }
+
+        private void helpView_Clicked(object sender, RoutedEventArgs e)
+        {
+            DataContext = new helpViewModel();
+        }
+
+        private void settingsView_Clicked(object sender, RoutedEventArgs e)
+        {
+            DataContext = new settingsViewModel();
         }
     }
 }
