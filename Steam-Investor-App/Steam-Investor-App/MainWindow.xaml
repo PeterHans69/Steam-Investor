@@ -7,7 +7,7 @@
         xmlns:viewmodels="clr-namespace:Steam_Investor_App.ViewModels"
         xmlns:views="clr-namespace:Steam_Investor_App.Views"
         mc:Ignorable="d"
-        Title="Steam Investor v1" Height="700.136" Width="1004.768" Background="White">
+        Title="Steam Investor v1" Height="700.136" Width="1004.768" Background="White" MinWidth="760" MinHeight="700">
     <Window.Resources>
         <DataTemplate x:Name="mainViewTemplate" DataType="{x:Type viewmodels:MainViewModel}">
             <views:UserControl1 DataContext="{Binding}"/>
@@ -25,7 +25,7 @@
     <Grid Background="#FF273C75" Margin="0,0,-1,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="86*"/>
-            <RowDefinition Diese DataGridRow. definition muss statisch sein! Height="82*"/>
+            <RowDefinition  Height="82*"/>
             <RowDefinition Height="84*"/>
             <RowDefinition Height="84*"/>
             <RowDefinition Height="84*"/>
@@ -36,8 +36,8 @@
 
         </Grid.RowDefinitions>
 
-        <ToolBarPanel   Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Height="86"  Margin="0" Background="#FF192A56" VerticalAlignment="Top" IsManipulationEnabled="True">
-            <Button  Content="profit/items" Height="48" Width="218" Margin="10"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" Click="MainView_Clicked" HorizontalAlignment="Left">
+        <ToolBarPanel   Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Height="86"   Background="#FF192A56" IsManipulationEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0">
+            <Button  Content="profit/items" Height="48" Width="218" Margin="20,10,10,10"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" Click="MainView_Clicked" HorizontalAlignment="Left">
 
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
@@ -83,7 +83,7 @@
                 </Button.Style>
 
             </Button>
-            <Button  Content="settings" Height="48" Width="218" Margin="10"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" Click="settingsView_Clicked" HorizontalAlignment="Left">
+            <Button  Content="settings" Height="48" Width="218" Margin="10,10,20,10"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" Click="settingsView_Clicked" HorizontalAlignment="Left">
 
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
