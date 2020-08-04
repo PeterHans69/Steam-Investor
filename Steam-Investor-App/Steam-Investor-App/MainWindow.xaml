@@ -7,7 +7,7 @@
         xmlns:viewmodels="clr-namespace:Steam_Investor_App.ViewModels"
         xmlns:views="clr-namespace:Steam_Investor_App.Views"
         mc:Ignorable="d"
-        Title="Steam Investor v1" Height="700.136" Width="1004.768" Background="White" MinWidth="760" MinHeight="700">
+        Title="Steam Investor v1" Background="White" MinWidth="760" MinHeight="900" Width="760" Height="900">
     <Window.Resources>
         <DataTemplate x:Name="mainViewTemplate" DataType="{x:Type viewmodels:MainViewModel}">
             <views:UserControl1 DataContext="{Binding}"/>
@@ -110,6 +110,6 @@
 
         </ToolBarPanel>
 
-        <ContentControl Grid.Row="1" Grid.RowSpan="7"  Content="{Binding}"/>
+        <ContentControl Grid.Row="1" Grid.RowSpan="7"  Content="{Binding}" Height="786"/>
     </Grid>
 </Window>

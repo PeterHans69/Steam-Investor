@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DocumentFormat.OpenXml.Drawing.Charts;
 using LiveCharts;
 using LiveCharts.Wpf;
 
@@ -25,12 +26,41 @@ namespace Steam_Investor_App.Views
         public UserControl1()
         {
             InitializeComponent();
-            Values1 = new ChartValues<double> { 3, 4, 6, 3, 2, 6 };
-            Values2 = new ChartValues<double> { 5, 3, 5, 7, 3, 9 };
+           //this.pieChart();
+            
+            this.CartesianMonth();
 
+        }
+        //Cartesian chart
+
+        
+
+        public void CartesianMonth()
+        {
+            SeriesCollectionMonth = new SeriesCollection
+            {
+                new LineSeries
+                {
+
+                    Title="Profit", Values = new ChartValues<double>{ 232, 400, 600,500,300,234,232, 400, 600, 500, 300, 234, -232, 400, 600, 500, 300, 234, 232, 400, 600, 500, 300, 234, 232, 400, 600, 500, 300, 234, 232 }
+                }
+
+            };
+
+            
+            
             DataContext = this;
         }
-        public ChartValues<double> Values1 { get; set; }
-        public ChartValues<double> Values2 { get; set; }
+        public Func<double, string> yFormatterMonth { get; set; }
+        public SeriesCollection SeriesCollectionMonth { get; set; }
+        public string[] Labels { get; set; }
+        
+
+
+
+        private void PieChart_DataClick(object sender, ChartPoint chartPoint)
+        {
+
+        }
     }
 }

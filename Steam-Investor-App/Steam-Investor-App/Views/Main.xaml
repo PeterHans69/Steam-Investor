@@ -1,19 +1,51 @@
-﻿<UserControl x:Class="Steam_Investor_App.Views.UserControl1"            
+﻿<UserControl            
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Steam_Investor_App.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Height="620">
-    <Grid  Background="#273c75" HorizontalAlignment="Center" VerticalAlignment="Top" Height="620" Margin="0,0,-1,0" Width="801">
+             xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Class="Steam_Investor_App.Views.UserControl1"
+             mc:Ignorable="d" Height="721.5" Width="760" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid  Background="#273c75" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,-126" Width="760" Height="725">
+        <StackPanel Background="#192a56" Height="407" Margin="20,0,20,20" Width="718" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <DockPanel Height="55" VerticalAlignment="Top" Width="718" HorizontalAlignment="Center" Background="#B20097E6" LastChildFill="False">
+                <Label Content="item" HorizontalAlignment="Center" Margin="6,0,1.5,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6"/>
+                <Label Content="condition" HorizontalAlignment="Center" Margin="1.5,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6"/>
+                <Label Content="buy price" HorizontalAlignment="Center" Margin="1.5,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6"/>
+                <Label Content="price goal" HorizontalAlignment="Center" Margin="1.5,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6"/>
+                <Label Content="currentprice" HorizontalAlignment="Center" Margin="1.5,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6"/>
+                <Label Content="profit " HorizontalAlignment="Center" Margin="1.5,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6"/>
+                <Label Content="profit with taxes" HorizontalAlignment="Center" Margin="1.5,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6"/>
+                <Label Content="steam link" HorizontalAlignment="Center" Margin="1.5,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6"/>
+                <Label Content="quantity" HorizontalAlignment="Center" Margin="1.5,12" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6"/>
+            </DockPanel>
+            <StackPanel Height="296"/>
+            <DockPanel Height="55" VerticalAlignment="Top" Width="718" HorizontalAlignment="Center" Background="#B20097E6" LastChildFill="False"/>
 
 
-        <DockPanel Background="#192a56" Height="192" LastChildFill="False" Margin="38,5,29,0" Width="734" VerticalAlignment="Top" HorizontalAlignment="Center">
-            
+        </StackPanel>
+
+
+        <Wpf:CartesianChart Series="{Binding SeriesCollectionMonth}" LegendLocation="Bottom" Height="195" Margin="30,20,26,0" VerticalAlignment="Top" Width="704" HorizontalAlignment="Center" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" VerticalContentAlignment="Top" ScrollBarFill="#1E2C2C2C" OpacityMask="#FFC32020">
+            <Wpf:CartesianChart.AxisX>
+                <Wpf:Axis Title="last 30 days" LabelFormatter="{Binding xFormatterMonth}" Labels="30 days ago,29 days ago,28 days ago,27 days ago,26 days ago,25 days ago,24 days ago,23 days ago,22 days ago,21 days ago,20 days ago,19 days ago,18 days ago,17 days ago,16 days ago,15 days ago,14 days ago,13 days ago,12 days ago,11 days ago,10 days ago,9 days ago,8 days ago,7 days ago, 6 days ago,5 days ago, 4 days ago,3 days ago,2 days ago,1 day ago, today"/>
+            </Wpf:CartesianChart.AxisX>
+            <Wpf:CartesianChart.AxisY>
+                <Wpf:Axis Title="profit" LabelFormatter="{Binding yFormatterMonth}"/>
+            </Wpf:CartesianChart.AxisY>
+
+        </Wpf:CartesianChart>
+
+        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="0,225,0,444" VerticalAlignment="Center">
+            <Label Content="profit:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="36" Foreground="#FFF5F6FA"/>
+            <Label Content="234€" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="36" Foreground="#FF4CD137"/>
 
         </DockPanel>
-        <DockPanel Background="#192a56" Height="326" Margin="36,0,35,75" Width="730" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+
+
+
+
+
 
     </Grid>
 </UserControl>
