@@ -7,7 +7,8 @@
         xmlns:viewmodels="clr-namespace:Steam_Investor_App.ViewModels"
         xmlns:views="clr-namespace:Steam_Investor_App.Views"
         mc:Ignorable="d"
-        Title="Steam Investor v1" Background="White" MinWidth="760" MinHeight="900" Width="760" Height="900">
+        WindowStartupLocation="CenterScreen"
+        Title="Steam Investor v1" Background="White" MinWidth="1000" MinHeight="920" Width="1000" Height="920">
     <Window.Resources>
         <DataTemplate x:Name="mainViewTemplate" DataType="{x:Type viewmodels:MainViewModel}">
             <views:UserControl1 DataContext="{Binding}"/>

@@ -1,4 +1,5 @@
-﻿using Steam_Investor_App.ViewModels;
+﻿using Steam_Investor_App.SteamData;
+using Steam_Investor_App.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +24,10 @@ namespace Steam_Investor_App
     {
         public MainWindow()
         {
+            GetSteamItems.LoadAllItems();
             InitializeComponent();
             DataContext = new MainViewModel();
+
         }
 
         

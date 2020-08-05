@@ -1,0 +1,90 @@
+﻿<Window x:Class="Steam_Investor_App.Windows.AddItem"
+        WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Steam_Investor_App.Windows"
+        mc:Ignorable="d"
+        Title="AddItem" Height="401.611" Width="460" Background="#273c75">
+    <Grid>
+        <Button  Content="submit" Height="48" Width="218" Margin="0,301,0,22"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#353b48" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#2f3640" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+
+        </Button>
+        <StackPanel HorizontalAlignment="Left" Height="281" Margin="2,12,0,0" VerticalAlignment="Top" Width="157">
+            <Label Content="name [eng]" HorizontalAlignment="Center" Margin="7,15,17,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="133" Height="35"/>
+            <Label Content="condition" HorizontalAlignment="Center" Margin="7,15,17,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="133" Height="35"/>
+            <Label Content="quantity" HorizontalAlignment="Center" Margin="4,15,26,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="127" Height="35"/>
+            <Label Content="price per item" HorizontalAlignment="Center" Margin="2,15,3,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="152" Height="35"/>
+            <Label Content="price goal" HorizontalAlignment="Center" Margin="2,15,19,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="136" Height="35"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="281" Margin="165,12,0,0" VerticalAlignment="Top" Width="282">
+            <TextBox Height="36" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
+            <StackPanel Height="41" Margin="0,15,10,0">
+                <ComboBox Height="34">
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontSize="20" >Field-Tested</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontSize="20" >Minimal Wear</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontSize="20" >Battle-Scarred</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontSize="20" >Well-Worn</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontSize="20" >Factory New</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <ComboBoxItem>
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock FontSize="20" >Not Painted</TextBlock>
+                        </StackPanel>
+                    </ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <TextBox Height="35" TextWrapping="Wrap" Text="1" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
+            <TextBox Height="34" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
+            <TextBox Height="34" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
+            
+        </StackPanel>
+
+    </Grid>
+</Window>
