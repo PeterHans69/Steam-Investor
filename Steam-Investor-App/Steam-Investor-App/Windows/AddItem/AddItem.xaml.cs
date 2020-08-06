@@ -1,5 +1,6 @@
 ﻿using DocumentFormat.OpenXml.Spreadsheet;
 using Steam_Investor_App.ViewModels;
+using Steam_Investor_App.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace Steam_Investor_App.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+           
             
         }
     }

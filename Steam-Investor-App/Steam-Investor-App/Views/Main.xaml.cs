@@ -60,7 +60,7 @@ namespace Steam_Investor_App.Views
         public string[] Labels { get; set; }
         
 
-
+        //adds an Item to the stack Panel
         public void addItem(UserControl userControl)
         {
             ItemList.Children.Add(userControl);
@@ -74,8 +74,11 @@ namespace Steam_Investor_App.Views
 
 
         }
-        
 
-        
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Item item = new Item();
+            ItemList.Children.Add(item);
+        }
     }
 }

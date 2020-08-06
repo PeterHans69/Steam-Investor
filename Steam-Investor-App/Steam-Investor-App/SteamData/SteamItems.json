@@ -2,11 +2,11 @@
   "success": true,
   "start": 0,
   "pagesize": 100,
-  "total_count": 15043,
+  "total_count": 15030,
   "searchdata": {
     "query": "",
     "search_descriptions": false,
-    "total_count": 15043,
+    "total_count": 15030,
     "pagesize": 100,
     "prefix": "searchResults",
     "class_prefix": "market"
@@ -550,7 +550,7 @@
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3496871984",
+        "classid": "3945692759",
         "instanceid": "188530139",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f2-r3Yi5FvISJmYGZnPLmDLbUkmJE5Ysm37-Vpoj32wXs-EJrNmumLNDAclI6Z1zX_Vjqxb29hcO878nPmyRlpGB8sq1srR54",
@@ -567,7 +567,7 @@
     {
       "name": "Nova | Wood Fired (Battle-Scarred)",
       "hash_name": "Nova | Wood Fired (Battle-Scarred)",
-      "sell_listings": 1122,
+      "sell_listings": 1120,
       "sell_price": 10,
       "sell_price_text": "$0.10",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -640,8 +640,8 @@
       "name": "G3SG1 | Hunter (Minimal Wear)",
       "hash_name": "G3SG1 | Hunter (Minimal Wear)",
       "sell_listings": 1427,
-      "sell_price": 12,
-      "sell_price_text": "$0.12",
+      "sell_price": 11,
+      "sell_price_text": "$0.11",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
@@ -658,7 +658,7 @@
         "market_hash_name": "G3SG1 | Hunter (Minimal Wear)",
         "commodity": 0
       },
-      "sale_price_text": "$0.11"
+      "sale_price_text": "$0.10"
     },
     {
       "name": "Nova | Polar Mesh (Field-Tested)",
@@ -687,14 +687,14 @@
     {
       "name": "P250 | Boreal Forest (Field-Tested)",
       "hash_name": "P250 | Boreal Forest (Field-Tested)",
-      "sell_listings": 29084,
+      "sell_listings": 29011,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "310776570",
+        "classid": "3945333004",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhoyszOfi9H_8iJlo-Zkvb4DLbUkmJE5Yt1iOyY9tih3lfkqRI5MGnwdteSJwQ5Y1iD-1bqk-7rjcW7vsjJnXBhpGB8srdBob7C",
@@ -711,14 +711,14 @@
     {
       "name": "PP-Bizon | Facility Sketch (Field-Tested)",
       "hash_name": "PP-Bizon | Facility Sketch (Field-Tested)",
-      "sell_listings": 13046,
+      "sell_listings": 13032,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3035571108",
+        "classid": "3940569881",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotLO_JAlf2-r3czFX6cyknY6fqOD8Oq_UqWZU7Mxkh6fFo9T0iwK2rUFrNmqlIIXAJlA7YV2F-FXryLzsgJO4u5TOm3tn7id3-z-DyGqIfxJS",
@@ -735,14 +735,14 @@
     {
       "name": "FAMAS | Colony (Battle-Scarred)",
       "hash_name": "FAMAS | Colony (Battle-Scarred)",
-      "sell_listings": 8825,
+      "sell_listings": 8828,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945332106",
+        "classid": "310779733",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRfwPz3Yi1D79mJmYGZnvnxDLPUl31IppRziLqVpIn3jg23rRFqMmGncoOcdVNrZwrY8wPqyL270Jbuvs-aziZ9-n51QeF8LY0",
@@ -759,7 +759,7 @@
     {
       "name": "UMP-45 | Urban DDPAT (Field-Tested)",
       "hash_name": "UMP-45 | Urban DDPAT (Field-Tested)",
-      "sell_listings": 32456,
+      "sell_listings": 32424,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -783,7 +783,7 @@
     {
       "name": "FAMAS | Colony (Well-Worn)",
       "hash_name": "FAMAS | Colony (Well-Worn)",
-      "sell_listings": 6090,
+      "sell_listings": 6080,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -807,14 +807,14 @@
     {
       "name": "USP-S | Forest Leaves (Field-Tested)",
       "hash_name": "USP-S | Forest Leaves (Field-Tested)",
-      "sell_listings": 12128,
+      "sell_listings": 12109,
       "sell_price": 9,
       "sell_price_text": "$0.09",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3941820712",
+        "classid": "3945328308",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ08-mq4yOluHxIITck29Y_cg_373Fpo7z0QW18hBsY2_yJdKcIwZoaFnYqFXtw-juhcLtuJXNzSNhsj5iuyhKbQ0iow",
@@ -831,14 +831,14 @@
     {
       "name": "Souvenir AUG | Sweeper (Field-Tested)",
       "hash_name": "Souvenir AUG | Sweeper (Field-Tested)",
-      "sell_listings": 421,
+      "sell_listings": 416,
       "sell_price": 32,
       "sell_price_text": "$0.32",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3944341482",
+        "classid": "3938730553",
         "instanceid": "188530139",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFBRw7P7NYjV9_92wkZSSlfv1MLDum25V4dB8xLDHrI2tjgbm-kRoa2HycofEcQc8ZgvZ-gDvwby705S17pXLmyBruCQ8pSGKnwGWryQ",
@@ -855,7 +855,7 @@
     {
       "name": "Sawed-Off | Serenity (Minimal Wear)",
       "hash_name": "Sawed-Off | Serenity (Minimal Wear)",
-      "sell_listings": 108,
+      "sell_listings": 110,
       "sell_price": 140,
       "sell_price_text": "$1.40",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -879,7 +879,7 @@
     {
       "name": "Souvenir MP9 | Sand Dashed (Minimal Wear)",
       "hash_name": "Souvenir MP9 | Sand Dashed (Minimal Wear)",
-      "sell_listings": 133,
+      "sell_listings": 131,
       "sell_price": 76,
       "sell_price_text": "$0.76",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -903,7 +903,7 @@
     {
       "name": "StatTrak™ MAG-7 | Heat (Minimal Wear)",
       "hash_name": "StatTrak™ MAG-7 | Heat (Minimal Wear)",
-      "sell_listings": 177,
+      "sell_listings": 176,
       "sell_price": 333,
       "sell_price_text": "$3.33",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -927,14 +927,14 @@
     {
       "name": "MP7 | Whiteout (Minimal Wear)",
       "hash_name": "MP7 | Whiteout (Minimal Wear)",
-      "sell_listings": 24,
-      "sell_price": 3085,
-      "sell_price_text": "$30.85",
+      "sell_listings": 25,
+      "sell_price": 3067,
+      "sell_price_text": "$30.67",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945469200",
+        "classid": "310777861",
         "instanceid": "480085569",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6ryFBRv7OTAeClH48miq4yCkP_gferXxDwDv5Zy27GY9t2sigDm_kVrMT2nIILDJFU9NF2Cr1a-lL_s1JKi_MOeui7SoYY",
@@ -946,12 +946,12 @@
         "market_hash_name": "MP7 | Whiteout (Minimal Wear)",
         "commodity": 0
       },
-      "sale_price_text": "$29.51"
+      "sale_price_text": "$29.34"
     },
     {
       "name": "StatTrak™ G3SG1 | Orange Crash (Well-Worn)",
       "hash_name": "StatTrak™ G3SG1 | Orange Crash (Well-Worn)",
-      "sell_listings": 49,
+      "sell_listings": 50,
       "sell_price": 43,
       "sell_price_text": "$0.43",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -999,14 +999,14 @@
     {
       "name": "MP9 | Slide (Field-Tested)",
       "hash_name": "MP9 | Slide (Field-Tested)",
-      "sell_listings": 10357,
+      "sell_listings": 10379,
       "sell_price": 5,
       "sell_price_text": "$0.05",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945332474",
+        "classid": "3035569517",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FA957ODYfTxW-Nmkx7-GkvP9JrafkGpV7Zd13eqWrNyt2AHi_hdqam33JdSQdlJtZ1_V-la_lby51pG974OJlyXgtRQKKA",
@@ -1024,13 +1024,13 @@
       "name": "G3SG1 | Black Sand (Battle-Scarred)",
       "hash_name": "G3SG1 | Black Sand (Battle-Scarred)",
       "sell_listings": 306,
-      "sell_price": 24,
-      "sell_price_text": "$0.24",
+      "sell_price": 20,
+      "sell_price_text": "$0.20",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3943106563",
+        "classid": "3945389026",
         "instanceid": "188530139",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZf0Ob3dm5R642JloyKlPznMrXVqWNU6dNoxLGQp4mjiw3jqEA9MmqgI9KWc1Q9MgmC_gXqyO3m1JbtupnPwCFisiY8pSGK_it7mDs",
@@ -1042,7 +1042,7 @@
         "market_hash_name": "G3SG1 | Black Sand (Battle-Scarred)",
         "commodity": 0
       },
-      "sale_price_text": "$0.23"
+      "sale_price_text": "$0.19"
     },
     {
       "name": "Berlin 2019 Train Souvenir Package",
@@ -1071,14 +1071,14 @@
     {
       "name": "P90 | Asiimov (Minimal Wear)",
       "hash_name": "P90 | Asiimov (Minimal Wear)",
-      "sell_listings": 77,
-      "sell_price": 1764,
-      "sell_price_text": "$17.64",
+      "sell_listings": 75,
+      "sell_price": 1778,
+      "sell_price_text": "$17.78",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "2738208576",
+        "classid": "3945673858",
         "instanceid": "188530139",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopuP1FAR17OORIXBD_9W_mY-dqPv9NLPF2DtS6ZJ33e_Cpd-niw3sqEY_MGzzItXGJlM3YwrT-QS7ye3p1J7ttJXXiSw09F9GDzA",
@@ -1090,12 +1090,12 @@
         "market_hash_name": "P90 | Asiimov (Minimal Wear)",
         "commodity": 0
       },
-      "sale_price_text": "$16.88"
+      "sale_price_text": "$17.01"
     },
     {
       "name": "Souvenir P90 | Storm (Minimal Wear)",
       "hash_name": "Souvenir P90 | Storm (Minimal Wear)",
-      "sell_listings": 153,
+      "sell_listings": 155,
       "sell_price": 130,
       "sell_price_text": "$1.30",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1119,7 +1119,7 @@
     {
       "name": "SSG 08 | Blue Spruce (Field-Tested)",
       "hash_name": "SSG 08 | Blue Spruce (Field-Tested)",
-      "sell_listings": 35123,
+      "sell_listings": 35077,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1143,7 +1143,7 @@
     {
       "name": "SSG 08 | Red Stone (Field-Tested)",
       "hash_name": "SSG 08 | Red Stone (Field-Tested)",
-      "sell_listings": 952,
+      "sell_listings": 959,
       "sell_price": 28,
       "sell_price_text": "$0.28",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1167,7 +1167,7 @@
     {
       "name": "M4A1-S | Boreal Forest (Battle-Scarred)",
       "hash_name": "M4A1-S | Boreal Forest (Battle-Scarred)",
-      "sell_listings": 3083,
+      "sell_listings": 3093,
       "sell_price": 11,
       "sell_price_text": "$0.11",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1191,7 +1191,7 @@
     {
       "name": "Dual Berettas | Colony (Field-Tested)",
       "hash_name": "Dual Berettas | Colony (Field-Tested)",
-      "sell_listings": 34975,
+      "sell_listings": 34961,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1215,14 +1215,14 @@
     {
       "name": "AUG | Contractor (Field-Tested)",
       "hash_name": "AUG | Contractor (Field-Tested)",
-      "sell_listings": 39311,
+      "sell_listings": 39224,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945328514",
+        "classid": "310776590",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFBRv7OPFcgJP6di_gY3FwaX2ZuuEzjxQscMgiOvDrI-tjFfkqUI6ZmnwI46dc1NoNQ7X-ATowvCv28F3OnPKLg",
@@ -1239,14 +1239,14 @@
     {
       "name": "G3SG1 | Polar Camo (Field-Tested)",
       "hash_name": "G3SG1 | Polar Camo (Field-Tested)",
-      "sell_listings": 36696,
+      "sell_listings": 36725,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3935494978",
+        "classid": "310776717",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZf2-r3cC9B-NW1q4OEmePmMqjFqWZU7Mxkh6fH8Imni1e3rhJpZWv0LNDHelI-NwuDrwPswO3s0JG4v5vJz3ZlvCkn-z-DyHWoV0Xo",
@@ -1263,15 +1263,15 @@
     {
       "name": "AWP | Safari Mesh (Field-Tested)",
       "hash_name": "AWP | Safari Mesh (Field-Tested)",
-      "sell_listings": 46219,
+      "sell_listings": 46545,
       "sell_price": 12,
       "sell_price_text": "$0.12",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945328251",
-        "instanceid": "302028390",
+        "classid": "3940560476",
+        "instanceid": "480085569",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FBRw7P7NYjV9-N24q42Ok_7hPvXXlGkBsJ1z2b6Rp9302gLm-Uo-am2lItXBegFraV7T-FHtkOq-1sW8ot2Xnl-RcvNU",
         "tradable": 1,
@@ -1287,14 +1287,14 @@
     {
       "name": "XM1014 | Blue Spruce (Field-Tested)",
       "hash_name": "XM1014 | Blue Spruce (Field-Tested)",
-      "sell_listings": 32326,
+      "sell_listings": 32233,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945333744",
+        "classid": "310777325",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgporrf0e1Y07ODHTjBN_8-JmYWPnuL5feuJwjlVscQhj7rH9tzw2wXmqkNlYG-hJNWSegc9Zl-E_QK9xbjr08Si_MOejgzGL-s",
@@ -1311,7 +1311,7 @@
     {
       "name": "CZ75-Auto | Imprint (Factory New)",
       "hash_name": "CZ75-Auto | Imprint (Factory New)",
-      "sell_listings": 345,
+      "sell_listings": 347,
       "sell_price": 34,
       "sell_price_text": "$0.34",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1335,7 +1335,7 @@
     {
       "name": "Souvenir AUG | Sweeper (Well-Worn)",
       "hash_name": "Souvenir AUG | Sweeper (Well-Worn)",
-      "sell_listings": 80,
+      "sell_listings": 79,
       "sell_price": 53,
       "sell_price_text": "$0.53",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1431,14 +1431,14 @@
     {
       "name": "AWP | Graphite (Factory New)",
       "hash_name": "AWP | Graphite (Factory New)",
-      "sell_listings": 174,
-      "sell_price": 10083,
-      "sell_price_text": "$100.83",
+      "sell_listings": 172,
+      "sell_price": 10346,
+      "sell_price_text": "$103.46",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3944497786",
+        "classid": "3945870564",
         "instanceid": "480085569",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAZt7PDaZDBS4NmJlpKKgfjLP7LWnn8fvcMk0-3Ep96ijAbs-xVvMGqhJ4_DI1M5NFzZqwK_xe3shp7v7Ziby2wj5HdqUaxXFQ",
@@ -1450,7 +1450,7 @@
         "market_hash_name": "AWP | Graphite (Factory New)",
         "commodity": 0
       },
-      "sale_price_text": "$96.45"
+      "sale_price_text": "$98.97"
     },
     {
       "name": "AUG | Syd Mead (Factory New)",
@@ -1479,7 +1479,7 @@
     {
       "name": "Nova | Plume (Battle-Scarred)",
       "hash_name": "Nova | Plume (Battle-Scarred)",
-      "sell_listings": 186,
+      "sell_listings": 188,
       "sell_price": 25,
       "sell_price_text": "$0.25",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1503,7 +1503,7 @@
     {
       "name": "AUG | Storm (Battle-Scarred)",
       "hash_name": "AUG | Storm (Battle-Scarred)",
-      "sell_listings": 8340,
+      "sell_listings": 8320,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1527,14 +1527,14 @@
     {
       "name": "MAG-7 | Popdog (Field-Tested)",
       "hash_name": "MAG-7 | Popdog (Field-Tested)",
-      "sell_listings": 4450,
+      "sell_listings": 4427,
       "sell_price": 9,
       "sell_price_text": "$0.09",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3938027716",
+        "classid": "3566167536",
         "instanceid": "188530139",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7uifDhnwMzFcDoV08y5hISEkMj5Nr_Yg2Yfu5Eli-rC8NXx3APt_kU6N2vyIYbGcwNvYgrQ-VjskLro08PuuZyYmmwj5Hd2JIhx7A",
@@ -1551,7 +1551,7 @@
     {
       "name": "G3SG1 | Desert Storm (Battle-Scarred)",
       "hash_name": "G3SG1 | Desert Storm (Battle-Scarred)",
-      "sell_listings": 9002,
+      "sell_listings": 9012,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1575,7 +1575,7 @@
     {
       "name": "SG 553 | Danger Close (Field-Tested)",
       "hash_name": "SG 553 | Danger Close (Field-Tested)",
-      "sell_listings": 10297,
+      "sell_listings": 10292,
       "sell_price": 9,
       "sell_price_text": "$0.09",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1599,14 +1599,14 @@
     {
       "name": "MAC-10 | Surfwood (Field-Tested)",
       "hash_name": "MAC-10 | Surfwood (Field-Tested)",
-      "sell_listings": 793,
-      "sell_price": 14,
-      "sell_price_text": "$0.14",
+      "sell_listings": 788,
+      "sell_price": 13,
+      "sell_price_text": "$0.13",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945352894",
+        "classid": "3608084291",
         "instanceid": "519977179",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldfwOP3ZSpL68-JloWKlP_LPr7Vn35cppMi3r3F8d3x3QOx_RA5Ym6gIdTDJAY3YF_W-AS3x-7u0MW46pXBynN9-n513jRv-bQ",
@@ -1618,12 +1618,12 @@
         "market_hash_name": "MAC-10 | Surfwood (Field-Tested)",
         "commodity": 0
       },
-      "sale_price_text": "$0.13"
+      "sale_price_text": "$0.12"
     },
     {
       "name": "Sawed-Off | Amber Fade (Field-Tested)",
       "hash_name": "Sawed-Off | Amber Fade (Field-Tested)",
-      "sell_listings": 619,
+      "sell_listings": 608,
       "sell_price": 27,
       "sell_price_text": "$0.27",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1647,7 +1647,7 @@
     {
       "name": "StatTrak™ M249 | System Lock (Field-Tested)",
       "hash_name": "StatTrak™ M249 | System Lock (Field-Tested)",
-      "sell_listings": 257,
+      "sell_listings": 258,
       "sell_price": 40,
       "sell_price_text": "$0.40",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1695,14 +1695,14 @@
     {
       "name": "Glock-18 | Brass (Factory New)",
       "hash_name": "Glock-18 | Brass (Factory New)",
-      "sell_listings": 14,
-      "sell_price": 2135,
-      "sell_price_text": "$21.35",
+      "sell_listings": 13,
+      "sell_price": 2504,
+      "sell_price_text": "$25.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3939459954",
+        "classid": "3944639917",
         "instanceid": "480085569",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0uL3cy9D_8-JmImMn-O6MOLXlGkJvJ0iieiW99mt3Q2yqhU_YDr7ctORewNsYgzT81e8weu70Yj84sojP1pYAA",
@@ -1714,19 +1714,19 @@
         "market_hash_name": "Glock-18 | Brass (Factory New)",
         "commodity": 0
       },
-      "sale_price_text": "$20.43"
+      "sale_price_text": "$23.96"
     },
     {
       "name": "Five-SeveN | Forest Night (Field-Tested)",
       "hash_name": "Five-SeveN | Forest Night (Field-Tested)",
-      "sell_listings": 33211,
+      "sell_listings": 33225,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945333152",
+        "classid": "310776784",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLOzLhRlxfbGTjVb09q5hoWYg8j6OrzZglRc7cF4n-SP9o2gjQbhqRVla2GnJ46VIQA_ZlyD-VHvxuu808S7tc7NzXFm7iUh4mGdwULQPtyarQ",
@@ -1767,7 +1767,7 @@
     {
       "name": "Souvenir R8 Revolver | Nitro (Well-Worn)",
       "hash_name": "Souvenir R8 Revolver | Nitro (Well-Worn)",
-      "sell_listings": 76,
+      "sell_listings": 75,
       "sell_price": 48,
       "sell_price_text": "$0.48",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1792,14 +1792,14 @@
       "name": "StatTrak™ MAG-7 | Petroglyph (Minimal Wear)",
       "hash_name": "StatTrak™ MAG-7 | Petroglyph (Minimal Wear)",
       "sell_listings": 63,
-      "sell_price": 132,
-      "sell_price_text": "$1.32",
+      "sell_price": 133,
+      "sell_price_text": "$1.33",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "1934418733",
-        "instanceid": "188532466",
+        "classid": "3945331584",
+        "instanceid": "188530170",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7uifDhjxszFcDoV08iknYKKm8j4OrzZgiVSupcn3buZ9Iqh3AOy-0RkY2GmdYOcdwJrM1GB-FW7w-bvjJTotZrL1zI97ch2lL8S",
         "tradable": 1,
@@ -1810,19 +1810,19 @@
         "market_hash_name": "StatTrak™ MAG-7 | Petroglyph (Minimal Wear)",
         "commodity": 0
       },
-      "sale_price_text": "$1.27"
+      "sale_price_text": "$1.28"
     },
     {
       "name": "XM1014 | Slipstream (Field-Tested)",
       "hash_name": "XM1014 | Slipstream (Field-Tested)",
-      "sell_listings": 2063,
+      "sell_listings": 2069,
       "sell_price": 9,
       "sell_price_text": "$0.09",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945329072",
+        "classid": "1934422811",
         "instanceid": "188530139",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgporrf0e1Y07PvRTiVPvYznwL-Nhfb3J7rdqWld_cBOh-zF_Jn4xgy1_ERvZDyiLdWcIA9qMwnT_QXsw7znjcC96p3LzXA27yUn7HbfykOpwUYbRb0JoCY",
@@ -1839,14 +1839,14 @@
     {
       "name": "Souvenir MAG-7 | Storm (Minimal Wear)",
       "hash_name": "Souvenir MAG-7 | Storm (Minimal Wear)",
-      "sell_listings": 223,
-      "sell_price": 26,
-      "sell_price_text": "$0.26",
+      "sell_listings": 226,
+      "sell_price": 25,
+      "sell_price_text": "$0.25",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3528534751",
+        "classid": "3510687324",
         "instanceid": "188530139",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7uifDhz3MzbZTJQ4dqkm46fqPv9NLPF2D8B7pIjj--XotSnjgfmrUVoMT37LIWccAVoNAyGr1HqwOvuh8K5tJ_XiSw0exkFg5I",
@@ -1858,20 +1858,20 @@
         "market_hash_name": "Souvenir MAG-7 | Storm (Minimal Wear)",
         "commodity": 0
       },
-      "sale_price_text": "$0.25"
+      "sale_price_text": "$0.24"
     },
     {
       "name": "M4A4 | Desert-Strike (Field-Tested)",
       "hash_name": "M4A4 | Desert-Strike (Field-Tested)",
-      "sell_listings": 144,
-      "sell_price": 709,
-      "sell_price_text": "$7.09",
+      "sell_listings": 145,
+      "sell_price": 676,
+      "sell_price_text": "$6.76",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3944218513",
-        "instanceid": "480085569",
+        "classid": "3945338231",
+        "instanceid": "188530139",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszceClD4s-im5KGqPrxN7LEmyUC7ZV32LDC8NWjjVbi-hA_NWmnJdPGcQU7ZFjRrlTowei6h5W0tJ7K1zI97Qdxs-_G",
         "tradable": 1,
@@ -1882,19 +1882,19 @@
         "market_hash_name": "M4A4 | Desert-Strike (Field-Tested)",
         "commodity": 0
       },
-      "sale_price_text": "$6.79"
+      "sale_price_text": "$6.47"
     },
     {
       "name": "Nova | Predator (Battle-Scarred)",
       "hash_name": "Nova | Predator (Battle-Scarred)",
-      "sell_listings": 7605,
+      "sell_listings": 7604,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945332877",
+        "classid": "310777238",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpouLWzKjhzw8zSdD9Q7d-3mb-DkvbiKvXSwDMEsJci0u_Fooii31Ky8kE-ZzzwJoCTcQA4NV_Zq1bolOzogsDpot2Xno1tLOyh",
@@ -1911,7 +1911,7 @@
     {
       "name": "P250 | Boreal Forest (Minimal Wear)",
       "hash_name": "P250 | Boreal Forest (Minimal Wear)",
-      "sell_listings": 6708,
+      "sell_listings": 6701,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -1935,9 +1935,9 @@
     {
       "name": "P2000 | Pulse (Minimal Wear)",
       "hash_name": "P2000 | Pulse (Minimal Wear)",
-      "sell_listings": 400,
-      "sell_price": 31,
-      "sell_price_text": "$0.31",
+      "sell_listings": 398,
+      "sell_price": 32,
+      "sell_price_text": "$0.32",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
@@ -1954,19 +1954,19 @@
         "market_hash_name": "P2000 | Pulse (Minimal Wear)",
         "commodity": 0
       },
-      "sale_price_text": "$0.30"
+      "sale_price_text": "$0.31"
     },
     {
       "name": "AUG | Contractor (Battle-Scarred)",
       "hash_name": "AUG | Contractor (Battle-Scarred)",
-      "sell_listings": 10120,
+      "sell_listings": 10090,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "310779044",
+        "classid": "3935513684",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFBRv7OPFcgJK6d2gjc7ez_LyN-LUxDMJsJIp2bHC8Y_2jVa1_kVrNz-hIYfBIwI4Y16C_FS3366x0iIMGq3k",
@@ -1983,9 +1983,9 @@
     {
       "name": "XM1014 | CaliCamo (Field-Tested)",
       "hash_name": "XM1014 | CaliCamo (Field-Tested)",
-      "sell_listings": 4139,
-      "sell_price": 8,
-      "sell_price_text": "$0.08",
+      "sell_listings": 4153,
+      "sell_price": 7,
+      "sell_price_text": "$0.07",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
@@ -2002,12 +2002,12 @@
         "market_hash_name": "XM1014 | CaliCamo (Field-Tested)",
         "commodity": 0
       },
-      "sale_price_text": "$0.07"
+      "sale_price_text": "$0.06"
     },
     {
       "name": "PP-Bizon | Urban Dashed (Field-Tested)",
       "hash_name": "PP-Bizon | Urban Dashed (Field-Tested)",
-      "sell_listings": 34684,
+      "sell_listings": 34693,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -2031,9 +2031,9 @@
     {
       "name": "P90 | Death Grip (Battle-Scarred)",
       "hash_name": "P90 | Death Grip (Battle-Scarred)",
-      "sell_listings": 43,
-      "sell_price": 405,
-      "sell_price_text": "$4.05",
+      "sell_listings": 45,
+      "sell_price": 370,
+      "sell_price_text": "$3.70",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
@@ -2050,20 +2050,20 @@
         "market_hash_name": "P90 | Death Grip (Battle-Scarred)",
         "commodity": 0
       },
-      "sale_price_text": "$3.88"
+      "sale_price_text": "$3.54"
     },
     {
       "name": "M4A1-S | Mecha Industries (Minimal Wear)",
       "hash_name": "M4A1-S | Mecha Industries (Minimal Wear)",
-      "sell_listings": 116,
-      "sell_price": 1738,
-      "sell_price_text": "$17.38",
+      "sell_listings": 114,
+      "sell_price": 1776,
+      "sell_price_text": "$17.76",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "2624238134",
-        "instanceid": "480085569",
+        "classid": "1812816407",
+        "instanceid": "188530139",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uOxh7-Gw_alDLbUlWNQ18x_jvzS4Z78jUeLpxo7Oy3tJo-ScVVoZAuB8wW_xOft0ZC6uZ-bn3Nn63Mq7C2Oyx2yiBsYarNv1OveFwt9ELX6XQ",
         "tradable": 1,
@@ -2074,14 +2074,14 @@
         "market_hash_name": "M4A1-S | Mecha Industries (Minimal Wear)",
         "commodity": 0
       },
-      "sale_price_text": "$16.63"
+      "sale_price_text": "$16.99"
     },
     {
       "name": "FAMAS | Survivor Z (Minimal Wear)",
       "hash_name": "FAMAS | Survivor Z (Minimal Wear)",
-      "sell_listings": 633,
-      "sell_price": 46,
-      "sell_price_text": "$0.46",
+      "sell_listings": 616,
+      "sell_price": 49,
+      "sell_price_text": "$0.49",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
@@ -2098,12 +2098,12 @@
         "market_hash_name": "FAMAS | Survivor Z (Minimal Wear)",
         "commodity": 0
       },
-      "sale_price_text": "$0.44"
+      "sale_price_text": "$0.47"
     },
     {
       "name": "MAG-7 | Rust Coat (Minimal Wear)",
       "hash_name": "MAG-7 | Rust Coat (Minimal Wear)",
-      "sell_listings": 1650,
+      "sell_listings": 1633,
       "sell_price": 6,
       "sell_price_text": "$0.06",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -2127,14 +2127,14 @@
     {
       "name": "StatTrak™ Negev | Desert-Strike (Factory New)",
       "hash_name": "StatTrak™ Negev | Desert-Strike (Factory New)",
-      "sell_listings": 89,
+      "sell_listings": 90,
       "sell_price": 86,
       "sell_price_text": "$0.86",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945333081",
+        "classid": "520027449",
         "instanceid": "188530170",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpouL-iLhFf0Ob3fzhF6cqJgImflvnnJ7TDm1Rd4cJ5nqfE99v3iVC3_EY5MDuhJdSRIVJoYl2CrAO7wu7njZG_vc-bnHNi6XIi-z-DyP8H2Bl8",
@@ -2151,15 +2151,15 @@
     {
       "name": "StatTrak™ AWP | Worm God (Well-Worn)",
       "hash_name": "StatTrak™ AWP | Worm God (Well-Worn)",
-      "sell_listings": 66,
-      "sell_price": 603,
-      "sell_price_text": "$6.03",
+      "sell_listings": 65,
+      "sell_price": 690,
+      "sell_price_text": "$6.90",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3945349499",
-        "instanceid": "188530170",
+        "classid": "3943238145",
+        "instanceid": "188530305",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAZx7PLfYQJW-9W4kb-GkvP9JrafxG0GscMhjLqW9t7zjVfn8hc6MmmnI9CTclRrYgrU_Vfowefs18K6uIOJlyXpUGetdA",
         "tradable": 1,
@@ -2170,12 +2170,12 @@
         "market_hash_name": "StatTrak™ AWP | Worm God (Well-Worn)",
         "commodity": 0
       },
-      "sale_price_text": "$5.77"
+      "sale_price_text": "$6.60"
     },
     {
       "name": "Souvenir P90 | Ash Wood (Minimal Wear)",
       "hash_name": "Souvenir P90 | Ash Wood (Minimal Wear)",
-      "sell_listings": 55,
+      "sell_listings": 54,
       "sell_price": 170,
       "sell_price_text": "$1.70",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -2199,14 +2199,14 @@
     {
       "name": "MP5-SD | Acid Wash (Field-Tested)",
       "hash_name": "MP5-SD | Acid Wash (Field-Tested)",
-      "sell_listings": 591,
+      "sell_listings": 596,
       "sell_price": 24,
       "sell_price_text": "$0.24",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "3943048471",
+        "classid": "3604539438",
         "instanceid": "188530139",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6rwOANf1OD3fC0X09mil4i0mvLwOq7c2GgIuMd02-2W8N-s2wHkqUtlYz_yJtTBJAE_YVvS-1K8w-7qjMTqu5TXiSw0Hyo_8Tc",
@@ -2223,9 +2223,9 @@
     {
       "name": "P250 | Gunsmoke (Well-Worn)",
       "hash_name": "P250 | Gunsmoke (Well-Worn)",
-      "sell_listings": 66,
-      "sell_price": 115,
-      "sell_price_text": "$1.15",
+      "sell_listings": 68,
+      "sell_price": 109,
+      "sell_price_text": "$1.09",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
@@ -2242,14 +2242,14 @@
         "market_hash_name": "P250 | Gunsmoke (Well-Worn)",
         "commodity": 0
       },
-      "sale_price_text": "$1.10"
+      "sale_price_text": "$1.05"
     },
     {
       "name": "Sawed-Off | Irradiated Alert (Field-Tested)",
       "hash_name": "Sawed-Off | Irradiated Alert (Field-Tested)",
-      "sell_listings": 53,
-      "sell_price": 76,
-      "sell_price_text": "$0.76",
+      "sell_listings": 52,
+      "sell_price": 80,
+      "sell_price_text": "$0.80",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
@@ -2266,7 +2266,7 @@
         "market_hash_name": "Sawed-Off | Irradiated Alert (Field-Tested)",
         "commodity": 0
       },
-      "sale_price_text": "$0.73"
+      "sale_price_text": "$0.77"
     },
     {
       "name": "SSG 08 | Lichen Dashed (Field-Tested)",
@@ -2295,7 +2295,7 @@
     {
       "name": "Sawed-Off | Forest DDPAT (Field-Tested)",
       "hash_name": "Sawed-Off | Forest DDPAT (Field-Tested)",
-      "sell_listings": 32498,
+      "sell_listings": 32436,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -2319,7 +2319,7 @@
     {
       "name": "MP7 | Army Recon (Battle-Scarred)",
       "hash_name": "MP7 | Army Recon (Battle-Scarred)",
-      "sell_listings": 9325,
+      "sell_listings": 9345,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -2343,7 +2343,7 @@
     {
       "name": "SG 553 | Army Sheen (Field-Tested)",
       "hash_name": "SG 553 | Army Sheen (Field-Tested)",
-      "sell_listings": 8455,
+      "sell_listings": 8350,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
@@ -2391,14 +2391,14 @@
     {
       "name": "SG 553 | Waves Perforated (Field-Tested)",
       "hash_name": "SG 553 | Waves Perforated (Field-Tested)",
-      "sell_listings": 36698,
+      "sell_listings": 36570,
       "sell_price": 4,
       "sell_price_text": "$0.04",
       "app_icon": "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/730/69f7ebe2735c366c65c0b33dae00e12dc40edbe4.jpg",
       "app_name": "Counter-Strike: Global Offensive",
       "asset_description": {
         "appid": 730,
-        "classid": "310777246",
+        "classid": "3945328507",
         "instanceid": "302028390",
         "background_color": "",
         "icon_url": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopb3wflFfwOP3ZTxS6eOym5SYqOD1Jb7CqWZU7Mxkh6fFrIrw0AHir0U4NT-gcIGXcgJvNFDT_VS2yeq-g8S87cucmiRm7HJ2-z-DyDnl3q6r",
