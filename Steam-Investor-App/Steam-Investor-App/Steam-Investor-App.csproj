@@ -82,6 +82,7 @@
       <DependentUpon>Item.xaml</DependentUpon>
     </Compile>
     <Compile Include="SteamData\GetSteamItems.cs" />
+    <Compile Include="ViewClasses\MainClass.cs" />
     <Compile Include="ViewModels\helpViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\settingsViewModel.cs" />
@@ -94,9 +95,10 @@
     <Compile Include="Views\settings.xaml.cs">
       <DependentUpon>settings.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\AddItem.xaml.cs">
+    <Compile Include="Windows\AddItem\AddItem.xaml.cs">
       <DependentUpon>AddItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\AddItem\AddItemClass.cs" />
     <Page Include="Item.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -125,7 +127,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\AddItem.xaml">
+    <Page Include="Windows\AddItem\AddItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -159,8 +161,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

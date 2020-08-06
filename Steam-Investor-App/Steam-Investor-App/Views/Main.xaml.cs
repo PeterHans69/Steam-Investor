@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using LiveCharts;
 using LiveCharts.Wpf;
+using Steam_Investor_App.ViewModels;
 using Steam_Investor_App.Windows;
 
 namespace Steam_Investor_App.Views
@@ -60,34 +61,21 @@ namespace Steam_Investor_App.Views
         
 
 
-
-        private void PieChart_DataClick(object sender, ChartPoint chartPoint)
-        {
-
-        }
-
-        AddItem additem= new AddItem();
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (additem.IsLoaded)
-            {
-                additem.Show();
-                additem.Activate();
-
-            }
-            else
-            {
-
-                additem = new AddItem();
-                additem.Show();
-            }
-
-
-        }
-
         public void addItem(UserControl userControl)
         {
             ItemList.Children.Add(userControl);
         }
+        
+
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainClass.addItemWindow();
+
+
+        }
+        
+
+        
     }
 }

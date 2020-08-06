@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Spreadsheet;
+using Steam_Investor_App.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +19,9 @@ namespace Steam_Investor_App.Windows
     /// <summary>
     /// Interaktionslogik für AddItem.xaml
     /// </summary>
-    public partial class AddItem : Window
+    public partial class AddItemWindows : Window
     {
-        public AddItem()
+        public AddItemWindows()
         {
             InitializeComponent();
         }
@@ -32,6 +33,7 @@ namespace Steam_Investor_App.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             
         }
     }
