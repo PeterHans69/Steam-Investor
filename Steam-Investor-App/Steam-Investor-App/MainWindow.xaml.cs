@@ -24,7 +24,8 @@ namespace Steam_Investor_App
     {
         public MainWindow()
         {
-            GetSteamItems.LoadAllItems();
+            Task.Run(() => GetSteamItems.LoadAllItemsAsync());
+            
             InitializeComponent();
             DataContext = new MainViewModel();
 

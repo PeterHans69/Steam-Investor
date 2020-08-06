@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,15 +23,16 @@ namespace Steam_Investor_App.Views
     /// <summary>
     /// Interaktionslogik für UserControl1.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class Main : UserControl
     {
-        public UserControl1()
+        
+        public Main()
         {
             InitializeComponent();
            //this.pieChart();
             
             this.CartesianMonth();
-
+            
         }
         //Cartesian chart
 
@@ -64,21 +66,28 @@ namespace Steam_Investor_App.Views
 
         }
 
-        AddItem additem = null;
+        AddItem additem= new AddItem();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            
-            if (additem == null)
+            if (additem.IsLoaded)
             {
-                AddItem additem = new AddItem();
                 additem.Show();
+                additem.Activate();
+
             }
             else
             {
-                additem.Activate();                
+
+                additem = new AddItem();
+                additem.Show();
             }
-            
+
+
+        }
+
+        public void addItem(UserControl userControl)
+        {
+            ItemList.Children.Add(userControl);
         }
     }
 }

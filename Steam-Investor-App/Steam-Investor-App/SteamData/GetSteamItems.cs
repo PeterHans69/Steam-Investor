@@ -10,7 +10,7 @@ namespace Steam_Investor_App.SteamData
 {
     public static class GetSteamItems
     {
-        public static void LoadAllItems()
+        public static Task LoadAllItemsAsync()
         {
             using (WebClient w = new WebClient())
             {
@@ -20,19 +20,18 @@ namespace Steam_Investor_App.SteamData
                 string jsonData = JsonConvert.SerializeObject(parsedJson, Formatting.Indented);
                 System.IO.File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"), jsonData);
 
-
+                return Task.CompletedTask;
             }
 
 
 
         }
-        public static float GetItemPrice(string name , string condition,int currency)
+        public static Task GetItemPrice(string name , string condition,int currency)
         {
             using (WebClient w = new WebClient())
             {
-                var responseData = w.DownloadString("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name + " " + condition);
-                float price=0; //= price aus responseData
-                return price;
+                string responseData = w.DownloadString("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name + " " + "("+condition+")");
+                return Task.CompletedTask;
             }
         }
 

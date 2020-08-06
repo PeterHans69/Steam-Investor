@@ -1,5 +1,4 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,28 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Steam_Investor_App.Windows
+namespace Steam_Investor_App
 {
     /// <summary>
-    /// Interaktionslogik für AddItem.xaml
+    /// Interaktionslogik für Item.xaml
     /// </summary>
-    public partial class AddItem : Window
+    public partial class Item : UserControl
     {
-        public AddItem()
+        public Item()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }
