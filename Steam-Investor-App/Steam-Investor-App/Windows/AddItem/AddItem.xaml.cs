@@ -35,13 +35,23 @@ namespace Steam_Investor_App.Windows
         }
 
         double pricePerItem;
+        double priceGoal;
         BrushConverter bc = new BrushConverter();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            nameLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
+            quantityLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa"); 
+            pricePerItemLabel.Foreground= (Brush)bc.ConvertFrom("#f5f6fa");
+            priceGoalLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
+
             Item item = new Item();
             if (checkPrice() == false)
             {
                pricePerItemLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
+            }
+            if (checkPriceGoal() == false)
+            {
+                priceGoalLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
             }
             sp.Children.Add(item);
             
@@ -60,6 +70,26 @@ namespace Steam_Investor_App.Windows
             {
                 return false;
             }
+        }
+        public bool checkPriceGoal()
+        {
+            try
+            {
+                priceGoal = Convert.ToDouble(priceGoalWPF);
+                if (pricePerItem < 0.03)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool ItemCheck(string Name, string condition)
+        {
+            return true;
         }
     }
 }

@@ -32,11 +32,11 @@
 
         </Button>
         <StackPanel HorizontalAlignment="Left" Height="281" Margin="2,12,0,0" VerticalAlignment="Top" Width="157">
-            <Label Content="name [eng]" HorizontalAlignment="Center" Margin="7,15,17,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="133" Height="35"/>
-            <Label Content="condition" HorizontalAlignment="Center" Margin="7,15,17,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="133" Height="35"/>
-            <Label Content="quantity" HorizontalAlignment="Center" Margin="4,15,26,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="127" Height="35"/>
+            <Label Name="nameLabel" Content="name [eng]" HorizontalAlignment="Center" Margin="7,15,17,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="133" Height="35"/>
+            <Label Name="conditionLabel" Content="condition" HorizontalAlignment="Center" Margin="7,15,17,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="133" Height="35"/>
+            <Label Name="quantityLabel" Content="quantity" HorizontalAlignment="Center" Margin="4,15,26,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="127" Height="35"/>
             <Label Name="pricePerItemLabel" Content="price per item" HorizontalAlignment="Center" Margin="2,15,3,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="152" Height="35"/>
-            <Label Content="price goal" HorizontalAlignment="Center" Margin="2,15,19,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="136" Height="35"/>
+            <Label Name="priceGoalLabel" Content="price goal" HorizontalAlignment="Center" Margin="2,15,19,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="136" Height="35"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="281" Margin="165,12,0,0" VerticalAlignment="Top" Width="282">
             <TextBox Name="ItemNameWPF"  Height="36" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
