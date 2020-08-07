@@ -35,12 +35,12 @@
             <Label Content="name [eng]" HorizontalAlignment="Center" Margin="7,15,17,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="133" Height="35"/>
             <Label Content="condition" HorizontalAlignment="Center" Margin="7,15,17,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="133" Height="35"/>
             <Label Content="quantity" HorizontalAlignment="Center" Margin="4,15,26,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="127" Height="35"/>
-            <Label Content="price per item" HorizontalAlignment="Center" Margin="2,15,3,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="152" Height="35"/>
+            <Label Name="pricePerItemLabel" Content="price per item" HorizontalAlignment="Center" Margin="2,15,3,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="152" Height="35"/>
             <Label Content="price goal" HorizontalAlignment="Center" Margin="2,15,19,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA" Width="136" Height="35"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="281" Margin="165,12,0,0" VerticalAlignment="Top" Width="282">
-            <TextBox Height="36" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
-            <StackPanel Height="41" Margin="0,15,10,0">
+            <TextBox Name="ItemNameWPF"  Height="36" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
+            <StackPanel Name="conditionWPF" Height="41" Margin="0,15,10,0">
                 <ComboBox Height="34">
                     <ComboBoxItem>
                         <StackPanel Orientation="Horizontal">
@@ -80,9 +80,9 @@
                     </ComboBoxItem>
                 </ComboBox>
             </StackPanel>
-            <TextBox Height="35" TextWrapping="Wrap" Text="1" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20" TextChanged="TextBox_TextChanged"/>
-            <TextBox Height="34" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
-            <TextBox Height="34" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
+            <TextBox Name="quantityWPF" Height="35" TextWrapping="Wrap" Text="1" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20" TextChanged="TextBox_TextChanged"/>
+            <TextBox Name="pricePerItemWPF" Height="34" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
+            <TextBox Name="priceGoalWPF" Height="34" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
             
         </StackPanel>
 

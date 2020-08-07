@@ -1,4 +1,4 @@
-﻿<UserControl            
+﻿<UserControl Name="MainUserControl"           
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -18,7 +18,7 @@
                 <Label Content="profit" HorizontalAlignment="Center" Margin="1.5,14,1.5,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="70"/>
                 <Label Content="profit with taxes" HorizontalAlignment="Center" Margin="1.5,14,1.5,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="124"/>
             </DockPanel>
-            <StackPanel Name="ItemList" Height="296"/>
+            <StackPanel x:Name="ItemList" Height="296"/>
             <DockPanel Height="55" VerticalAlignment="Center" Width="895" HorizontalAlignment="Center" Background="#B20097E6" LastChildFill="False" Margin="1,0">
                 <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="40,0,20,4" VerticalAlignment="Center">
                     <Label Content="total:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA"/>

@@ -22,20 +22,44 @@ namespace Steam_Investor_App.Windows
     /// </summary>
     public partial class AddItemWindows : Window
     {
-        public AddItemWindows()
+        StackPanel sp;
+        public AddItemWindows(StackPanel stackpanel) //needs the stack panel to add the item
         {
+            sp = stackpanel;
             InitializeComponent();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
 
+        double pricePerItem;
+        BrushConverter bc = new BrushConverter();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            Item item = new Item();
+            if (checkPrice() == false)
+            {
+               pricePerItemLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
+            }
+            sp.Children.Add(item);
             
+        }
+        public bool checkPrice()
+        {
+            try
+            {
+                pricePerItem= Convert.ToDouble(pricePerItemWPF);
+                if (pricePerItem < 0.03){
+                    return false;
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

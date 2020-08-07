@@ -70,7 +70,7 @@ namespace Steam_Investor_App.Views
         
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainClass.addItemWindow();
+            MainClass.addItemWindow(ItemList);
 
 
         }
@@ -79,6 +79,7 @@ namespace Steam_Investor_App.Views
         {
             Item item = new Item();
             ItemList.Children.Add(item);
+            
         }
     }
 }

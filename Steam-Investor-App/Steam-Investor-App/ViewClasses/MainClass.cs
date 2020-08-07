@@ -18,12 +18,12 @@ namespace Steam_Investor_App.ViewModels
 
         static AddItemWindows addItem=null;
         
-        public static void addItemWindow()
+        public static void addItemWindow(StackPanel sp)
         {
             
             if (addItem==null)
             {
-                addItem = new AddItemWindows();
+                addItem = new AddItemWindows(sp);
                 addItem.Closed += (sender, args) => addItem = null;
                 addItem.Show();
             }

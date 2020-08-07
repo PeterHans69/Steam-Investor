@@ -22,15 +22,16 @@ namespace Steam_Investor_App
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-        
+
+        MainViewModel mvm = new MainViewModel();
         public MainWindow()
         {
             Task.Run(() => GetSteamItems.LoadAllItemsAsync());
             
             InitializeComponent();
             
-            DataContext = new MainViewModel();
+            
+            DataContext = mvm;
 
         }
 
@@ -38,7 +39,7 @@ namespace Steam_Investor_App
 
         private void MainView_Clicked(object sender, RoutedEventArgs e)
         {
-            DataContext = new MainViewModel();
+            DataContext = mvm;
         }
 
         private void helpView_Clicked(object sender, RoutedEventArgs e)
