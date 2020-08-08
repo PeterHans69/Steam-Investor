@@ -161,6 +161,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="deleteIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="recycle-bin-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="minus-square.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

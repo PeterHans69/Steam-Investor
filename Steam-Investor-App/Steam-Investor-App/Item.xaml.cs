@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Drawing.Charts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace Steam_Investor_App
         public Item()
         {
             InitializeComponent();
+        }
+
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            (this.Parent as StackPanel).Children.Remove(this);
+
         }
     }
 }

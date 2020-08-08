@@ -37,34 +37,51 @@ namespace Steam_Investor_App.Windows
         double pricePerItem;
         double priceGoal;
         BrushConverter bc = new BrushConverter();
+        bool everythingIsCorrect;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            everythingIsCorrect = true;
             nameLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
             quantityLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa"); 
             pricePerItemLabel.Foreground= (Brush)bc.ConvertFrom("#f5f6fa");
             priceGoalLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
             conditionLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
             quantityLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
+            nameLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
 
-            Item item = new Item();
+            
+            if (checkName() == false)
+            {
+                nameLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
+                everythingIsCorrect = false;
+            }
             if (quantityCheck() == false)
             {
                 quantityLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
+                everythingIsCorrect = false;
             }
             if (checkPrice() == false)
             {
                pricePerItemLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
+                everythingIsCorrect = false;
             }
             if (checkPriceGoal() == false)
             {
                 priceGoalLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
+                everythingIsCorrect = false;
             }
             if (getSelectcetdCondition() == "")
             {
                 conditionLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
+                everythingIsCorrect = false;
             }
-            sp.Children.Add(item);
+            if (everythingIsCorrect == true)
+            {
+                Item item = new Item();
+                sp.Children.Add(item);
+            }
             
+
         }
         public bool checkPrice()
         {
@@ -82,12 +99,16 @@ namespace Steam_Investor_App.Windows
             }
 
         }
+        public bool checkName()
+        {
+            return true;
+        }
         public bool checkPriceGoal()
         {
             try
             {
                 priceGoal = Convert.ToDouble(priceGoalWPF.Text);
-                if (pricePerItem < 0.03)
+                if (priceGoal < 0.03)
                 {
                     return false;
                 }
@@ -98,11 +119,7 @@ namespace Steam_Investor_App.Windows
                 return false;
             }
         }
-        public bool ItemCheck(string Name, string condition)
-        {
-            return true;
-        }
-
+        
         public string getSelectcetdCondition()
         {
             if (conditionWPF.SelectedItem == null)
@@ -120,7 +137,12 @@ namespace Steam_Investor_App.Windows
         {
             try
             {
-                Convert.ToInt32(quantityWPF.Text);
+               var quantity = Convert.ToInt32(quantityWPF.Text);
+                if (quantity == 0)
+                {
+                    return false;
+                }
+                
                 return true;
             }
             catch
