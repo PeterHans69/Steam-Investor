@@ -40,8 +40,8 @@
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="281" Margin="165,12,0,0" VerticalAlignment="Top" Width="282">
             <TextBox Name="ItemNameWPF"  Height="36" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
-            <StackPanel Name="conditionWPF" Height="41" Margin="0,15,10,0">
-                <ComboBox Height="34">
+            <StackPanel Height="41" Margin="0,15,10,0">
+                <ComboBox Name="conditionWPF" Height="34">
                     <ComboBoxItem>
                         <StackPanel Orientation="Horizontal">
 

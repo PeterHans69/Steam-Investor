@@ -43,8 +43,14 @@ namespace Steam_Investor_App.Windows
             quantityLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa"); 
             pricePerItemLabel.Foreground= (Brush)bc.ConvertFrom("#f5f6fa");
             priceGoalLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
+            conditionLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
+            quantityLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
 
             Item item = new Item();
+            if (quantityCheck() == false)
+            {
+                quantityLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
+            }
             if (checkPrice() == false)
             {
                pricePerItemLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
@@ -53,6 +59,10 @@ namespace Steam_Investor_App.Windows
             {
                 priceGoalLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
             }
+            if (getSelectcetdCondition() == "")
+            {
+                conditionLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
+            }
             sp.Children.Add(item);
             
         }
@@ -60,7 +70,7 @@ namespace Steam_Investor_App.Windows
         {
             try
             {
-                pricePerItem= Convert.ToDouble(pricePerItemWPF);
+                pricePerItem= Convert.ToDouble(pricePerItemWPF.Text);
                 if (pricePerItem < 0.03){
                     return false;
                 }
@@ -70,12 +80,13 @@ namespace Steam_Investor_App.Windows
             {
                 return false;
             }
+
         }
         public bool checkPriceGoal()
         {
             try
             {
-                priceGoal = Convert.ToDouble(priceGoalWPF);
+                priceGoal = Convert.ToDouble(priceGoalWPF.Text);
                 if (pricePerItem < 0.03)
                 {
                     return false;
@@ -90,6 +101,32 @@ namespace Steam_Investor_App.Windows
         public bool ItemCheck(string Name, string condition)
         {
             return true;
+        }
+
+        public string getSelectcetdCondition()
+        {
+            if (conditionWPF.SelectedItem == null)
+            {
+                return "";
+            }
+            else
+            {
+                return conditionWPF.SelectedItem.ToString();
+            }
+            
+        }
+
+        public bool quantityCheck()
+        {
+            try
+            {
+                Convert.ToInt32(quantityWPF.Text);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

@@ -77,8 +77,7 @@ namespace Steam_Investor_App.Views
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Item item = new Item();
-            ItemList.Children.Add(item);
+            
             
         }
     }
