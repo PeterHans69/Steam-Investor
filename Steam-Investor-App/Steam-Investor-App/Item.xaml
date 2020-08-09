@@ -25,10 +25,40 @@
                 <ImageBrush/>
             </Button.BorderBrush>
             <Button.Background>
-                <ImageBrush ImageSource="minus-square.png" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="minus-square.png"/>
+                
                 
             </Button.Background>
             
+
+            <Button.Style>
+                <Style  TargetType="Button">
+                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Name="border" 
+                        BorderThickness="0" 
+                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" TargetName="border">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="minus-square-mouseOver.png" />
+                                            </Setter.Value>
+                                        </Setter>
+
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+
         </Button>
 
     </DockPanel>

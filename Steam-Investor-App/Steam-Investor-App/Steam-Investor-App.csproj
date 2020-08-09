@@ -170,5 +170,8 @@
   <ItemGroup>
     <Resource Include="minus-square.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="minus-square-mouseOver.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
