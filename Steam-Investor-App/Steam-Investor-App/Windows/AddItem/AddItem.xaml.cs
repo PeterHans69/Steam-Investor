@@ -44,8 +44,7 @@ namespace Steam_Investor_App.Windows
             nameLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
             quantityLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa"); 
             pricePerItemLabel.Foreground= (Brush)bc.ConvertFrom("#f5f6fa");
-            priceGoalLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
-            conditionLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
+            priceGoalLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");            
             quantityLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
             nameLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
 
@@ -70,11 +69,7 @@ namespace Steam_Investor_App.Windows
                 priceGoalLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
                 everythingIsCorrect = false;
             }
-            if (getSelectcetdCondition() == "")
-            {
-                conditionLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
-                everythingIsCorrect = false;
-            }
+            
             if (everythingIsCorrect == true)
             {
                 Item item = new Item();

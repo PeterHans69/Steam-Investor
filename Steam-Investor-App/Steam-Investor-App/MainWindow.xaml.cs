@@ -26,6 +26,7 @@ namespace Steam_Investor_App
         MainViewModel mvm = new MainViewModel();
         public MainWindow()
         {
+            SteamItem.searchforItem();
             Task.Run(() => GetSteamItems.LoadAllItemsAsync());
             
             InitializeComponent();
