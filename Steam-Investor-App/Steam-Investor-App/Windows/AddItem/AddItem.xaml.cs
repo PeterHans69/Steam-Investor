@@ -1,19 +1,9 @@
-﻿using DocumentFormat.OpenXml.Spreadsheet;
-using Steam_Investor_App.ViewModels;
-using Steam_Investor_App.Views;
+﻿using Steam_Investor_App.SteamData;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Steam_Investor_App.Windows
 {
@@ -40,6 +30,7 @@ namespace Steam_Investor_App.Windows
         bool everythingIsCorrect;
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             everythingIsCorrect = true;
             nameLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
             quantityLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa"); 
@@ -52,6 +43,7 @@ namespace Steam_Investor_App.Windows
             if (checkName() == false)
             {
                 nameLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
+                conditionLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
                 everythingIsCorrect = false;
             }
             if (quantityCheck() == false)
@@ -72,8 +64,9 @@ namespace Steam_Investor_App.Windows
             
             if (everythingIsCorrect == true)
             {
-                Item item = new Item();
+                Item item = new Item(ItemNameWPF.Text, getSelectcetdCondition(), quantityWPF.Text, pricePerItemWPF.Text, priceGoalWPF.Text); //Creates a new item
                 sp.Children.Add(item);
+                this.Close();
             }
             
 
@@ -96,7 +89,31 @@ namespace Steam_Investor_App.Windows
         }
         public bool checkName()
         {
-            return true;
+            Debug.WriteLine(ItemNameWPF.Text + " " + getSelectcetdCondition());
+            if (getSelectcetdCondition() == "No Condition")
+            {
+                if (SteamItem.searchforItem(ItemNameWPF.Text) == true)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if (SteamItem.searchforItem(ItemNameWPF.Text + " (" + getSelectcetdCondition() + ")") == true)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+
         }
         public bool checkPriceGoal()
         {
@@ -117,15 +134,36 @@ namespace Steam_Investor_App.Windows
         
         public string getSelectcetdCondition()
         {
-            if (conditionWPF.SelectedItem == null)
+
+            if (conditionWPF.SelectedIndex.ToString() == "0")
             {
-                return "";
+                return "No Condition";
             }
-            else
+            else if (conditionWPF.SelectedIndex.ToString() == "1")
             {
-                return conditionWPF.SelectedItem.ToString();
+                return "Field-Tested";
             }
-            
+            else if (conditionWPF.SelectedIndex.ToString() == "2")
+            {
+                return "Minimal Wear";
+            }
+            else if (conditionWPF.SelectedIndex.ToString() == "3")
+            {
+                return "Battle-Scarred";
+            }
+            else if (conditionWPF.SelectedIndex.ToString() == "4")
+            {
+                return "Well-Worn";
+            }
+            else if (conditionWPF.SelectedIndex.ToString() == "5")
+            {
+                return "Factory New";
+            }
+            else 
+            {
+                return "Not Painted";
+            }
+
         }
 
         public bool quantityCheck()

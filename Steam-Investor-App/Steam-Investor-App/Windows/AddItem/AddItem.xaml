@@ -40,9 +40,9 @@
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="281" Margin="165,12,0,0" VerticalAlignment="Top" Width="282">
             <TextBox Name="ItemNameWPF"  Height="36" TextWrapping="Wrap" VerticalContentAlignment="Center" Margin="0,15,10,0" FontSize="20"/>
-            <StackPanel Height="41" Margin="0,15,10,0">
-                <ComboBox Name="conditionWPF" Height="34">
-                    <ComboBoxItem IsSelected="True">
+            <StackPanel Height="34" Margin="0,15,10,0">
+                <ComboBox Name="conditionWPF" Height="34" SelectedValuePath="Tag" >
+                    <ComboBoxItem IsSelected="True" >
                         <StackPanel Orientation="Horizontal">
 
                             <TextBlock FontSize="20" >No Condition</TextBlock>

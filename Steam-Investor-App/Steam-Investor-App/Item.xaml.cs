@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Drawing.Charts;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,9 +22,30 @@ namespace Steam_Investor_App
     /// </summary>
     public partial class Item : UserControl
     {
-        public Item()
+
+        string url;
+        public Item(string name, string condition,string quantity,string price, string priceGoal)
         {
             InitializeComponent();
+
+            this.priceGoalXaml.Content = priceGoal;
+            this.itemNameXaml.Content = name;
+            this.conditionXaml.Content = condition;
+            this.quantityXaml.Content = quantity;
+            this.priceXaml.Content = price;
+            if(quantity!="No Condition")
+            {
+                url= "https://steamcommunity.com/market/listings/730/" + name + " (" + condition+")";
+                
+            }
+            else
+            {
+                url = "https://steamcommunity.com/market/listings/730/" + name;
+            }
+            Debug.WriteLine(url);
+            Uri myUri = new Uri(url, UriKind.Absolute); //makes new uri with correct link
+            Hyperlink.NavigateUri = myUri;
+
         }
 
         
@@ -31,6 +53,11 @@ namespace Steam_Investor_App
         {
             (this.Parent as StackPanel).Children.Remove(this);
 
+        }
+        private void OnRequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
+            e.Handled = true;
         }
     }
 }

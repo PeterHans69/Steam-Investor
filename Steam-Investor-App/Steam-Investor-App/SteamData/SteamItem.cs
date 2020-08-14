@@ -18,6 +18,8 @@ namespace Steam_Investor_App.SteamData
 
         public static bool searchforItem(string item)
         {
+            Debug.WriteLine(item);
+            
             // ReadAllBytes if the file encoding is UTF-8:
             string fileName = System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json");
             ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
@@ -53,20 +55,18 @@ namespace Steam_Investor_App.SteamData
                         {
                             // Assume valid JSON, known schema
                             reader.Read();
-                            if (reader.GetString().Equals(item))//If Item is in steams database
+                            if (reader.GetString().Equals(item))
                             {
                                 count++;
-                                return true; //then return true
-                            }
-                            else
-                            {
-                                return false;//else return false
+                                return true;
                             }
                         }
                         break;
                 }
             }
-            Debug.WriteLine($"{count} out of {total} have names that end with 'University'");
+            Debug.WriteLine($"{count} out of {total} have names that end with " +item);
+            return false;
+
         }
 
     }

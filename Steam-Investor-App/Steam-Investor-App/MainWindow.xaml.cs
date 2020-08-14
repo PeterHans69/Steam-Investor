@@ -1,4 +1,5 @@
 ﻿using Steam_Investor_App.SteamData;
+using Steam_Investor_App.SteamData.SteamMarketJson;
 using Steam_Investor_App.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -26,12 +27,14 @@ namespace Steam_Investor_App
         MainViewModel mvm = new MainViewModel();
         public MainWindow()
         {
-            SteamItem.searchforItem();
-            Task.Run(() => GetSteamItems.LoadAllItemsAsync());
-            
+
+            //Task.Run(() => GetSteamItems.LoadAllItemsAsync());
+             GetSteamItems.LoadAllItemsAsync();
+
+
             InitializeComponent();
             
-            
+
             DataContext = mvm;
 
         }
