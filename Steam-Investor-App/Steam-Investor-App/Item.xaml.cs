@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Drawing.Charts;
+using Steam_Investor_App.SteamData;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -33,7 +34,7 @@ namespace Steam_Investor_App
             this.conditionXaml.Content = condition;
             this.quantityXaml.Content = quantity;
             this.priceXaml.Content = price;
-            if(quantity!="No Condition")
+            if(condition!="No Condition")
             {
                 url= "https://steamcommunity.com/market/listings/730/" + name + " (" + condition+")";
                 
@@ -45,6 +46,17 @@ namespace Steam_Investor_App
             Debug.WriteLine(url);
             Uri myUri = new Uri(url, UriKind.Absolute); //makes new uri with correct link
             Hyperlink.NavigateUri = myUri;
+
+            //save item in Array
+            SteamItemForJson item = new SteamItemForJson();
+            item.itemName = name;
+            item.itemQuantity = quantity;
+            item.ItemBuyPrice = price;
+            item.ItemPriceGoal = priceGoal;
+            item.itemUrl = url;
+            item.itemCondition = condition;
+
+            MySteamItems.AddItemToJSON(item);
 
         }
 

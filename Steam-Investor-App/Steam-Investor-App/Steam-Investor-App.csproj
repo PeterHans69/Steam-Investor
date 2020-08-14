@@ -110,6 +110,7 @@
       <DependentUpon>Item.xaml</DependentUpon>
     </Compile>
     <Compile Include="SteamData\GetSteamItems.cs" />
+    <Compile Include="SteamData\MySteamItems.cs" />
     <Compile Include="SteamData\SteamItem.cs" />
     <Compile Include="ViewClasses\MainClass.cs" />
     <Compile Include="ViewModels\helpViewModel.cs" />

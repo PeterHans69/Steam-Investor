@@ -8,6 +8,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.IO;
 using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace Steam_Investor_App.SteamData
 {
@@ -19,7 +20,7 @@ namespace Steam_Investor_App.SteamData
         public static bool searchforItem(string item)
         {
             Debug.WriteLine(item);
-            
+
             // ReadAllBytes if the file encoding is UTF-8:
             string fileName = System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json");
             ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
@@ -55,7 +56,7 @@ namespace Steam_Investor_App.SteamData
                         {
                             // Assume valid JSON, known schema
                             reader.Read();
-                            if (reader.GetString().Equals(item))
+                            if (reader.GetString().Contains(item))
                             {
                                 count++;
                                 return true;
@@ -64,10 +65,14 @@ namespace Steam_Investor_App.SteamData
                         break;
                 }
             }
-            Debug.WriteLine($"{count} out of {total} have names that end with " +item);
+            Debug.WriteLine($"{count} out of {total} have names that end with " + item);
             return false;
 
         }
 
+
+
     }
 }
+
+    

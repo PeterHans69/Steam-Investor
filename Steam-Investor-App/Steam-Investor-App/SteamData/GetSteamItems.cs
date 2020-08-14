@@ -30,31 +30,31 @@ namespace Steam_Investor_App.SteamData
 
         public class AssetDescription
         {
-            public int appid { get; set; }
-            public string classid { get; set; }
-            public string instanceid { get; set; }
-            public string background_color { get; set; }
-            public string icon_url { get; set; }
-            public int tradable { get; set; }
-            public string name { get; set; }
-            public string name_color { get; set; }
-            public string type { get; set; }
-            public string market_name { get; set; }
-            public string market_hash_name { get; set; }
-            public int commodity { get; set; }
+            //public int appid { get; set; }
+           // public string classid { get; set; }
+            //public string instanceid { get; set; }
+            //public string background_color { get; set; }
+           // public string icon_url { get; set; }
+            //public int tradable { get; set; }
+            //public string name { get; set; }
+           // public string name_color { get; set; }
+           // public string type { get; set; }
+           // public string market_name { get; set; }
+           // public string market_hash_name { get; set; }
+           // public int commodity { get; set; }
         }
 
         public class Result
         {
-            public string name { get; set; }
+            //public string name { get; set; }
             public string hash_name { get; set; }
-            public int sell_listings { get; set; }
-            public int sell_price { get; set; }
-            public string sell_price_text { get; set; }
-            public string app_icon { get; set; }
-            public string app_name { get; set; }
-            public AssetDescription asset_description { get; set; }
-            public string sale_price_text { get; set; }
+            //public int sell_listings { get; set; }
+            //public int sell_price { get; set; }
+            //public string sell_price_text { get; set; }
+            //public string app_icon { get; set; }
+            //public string app_name { get; set; }
+            //public AssetDescription asset_description { get; set; }
+            //public string sale_price_text { get; set; }
         }
 
         public class RootObject
