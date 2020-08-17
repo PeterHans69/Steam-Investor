@@ -1,6 +1,8 @@
 ﻿using Steam_Investor_App.SteamData;
+using Steam_Investor_App.SteamData.SteamMarketJson;
 using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -46,27 +48,46 @@ namespace Steam_Investor_App.Windows
                 conditionLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
                 everythingIsCorrect = false;
             }
-            if (quantityCheck() == false)
+             if (quantityCheck() == false)
             {
                 quantityLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
                 everythingIsCorrect = false;
             }
-            if (checkPrice() == false)
+             if (checkPrice() == false)
             {
                pricePerItemLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
                 everythingIsCorrect = false;
             }
-            if (checkPriceGoal() == false)
+             if (checkPriceGoal() == false)
             {
                 priceGoalLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
                 everythingIsCorrect = false;
             }
             
-            if (everythingIsCorrect == true)
+            if(everythingIsCorrect == true)
             {
-                Item item = new Item(ItemNameWPF.Text, getSelectcetdCondition(), quantityWPF.Text, pricePerItemWPF.Text, priceGoalWPF.Text); //Creates a new item
-                sp.Children.Add(item);
-                this.Close();
+                int currency = 3;//I made this variables, to avoid the Exception that this thread is used by another process
+                string name = ItemNameWPF.Text;
+                string condition = getSelectcetdCondition();
+                var price = Task.Run(() => GetSteamItems.GetItemPrice(name, condition, currency).Result);
+
+                if (price != null)
+                {
+                    Item item = new Item(ItemNameWPF.Text, getSelectcetdCondition(), quantityWPF.Text, pricePerItemWPF.Text, priceGoalWPF.Text, price.Result); //Creates a new item
+                    sp.Children.Add(item);
+
+                    //save item in Array
+                    SteamItemForJson JsonItem = new SteamItemForJson();
+                    JsonItem.itemName = ItemNameWPF.Text;
+                    JsonItem.itemQuantity = quantityWPF.Text;
+                    JsonItem.ItemBuyPrice = pricePerItemWPF.Text;
+                    JsonItem.ItemPriceGoal = priceGoalWPF.Text;
+                    JsonItem.itemCondition = getSelectcetdCondition();
+                    JsonItem.itemPrice = price.Result;
+
+                    MySteamItems.AddItemToJSON(JsonItem);
+                    this.Close();
+                }
             }
             
 
@@ -89,6 +110,10 @@ namespace Steam_Investor_App.Windows
         }
         public bool checkName()
         {
+            if (ItemNameWPF.Text == "")
+            {
+                return false;
+            }
             Debug.WriteLine(ItemNameWPF.Text + " " + getSelectcetdCondition());
             if (getSelectcetdCondition() == "No Condition")
             {

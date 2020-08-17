@@ -10,23 +10,23 @@
         <ImageBrush/>
     </UserControl.Foreground>
     <DockPanel Height="64" VerticalAlignment="Top" Width="896" HorizontalAlignment="Center" Background="#FF40739E" LastChildFill="False" Margin="0,0,0,-1">
-        <StackPanel Width="229" VerticalAlignment="Bottom" Height="62">
-            <Label x:Name="itemNameXaml" Content="item" HorizontalAlignment="left" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="228" Height="30"/>
-            <Label x:Name="conditionXaml" Content="condition" HorizontalAlignment="Left" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="228" Height="30"/>
+        <StackPanel Width="216" VerticalAlignment="Bottom" Height="62" HorizontalAlignment="Left" Margin="5,0,0,0">
+            <Label x:Name="itemNameXaml" Content="item" HorizontalAlignment="left" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="200" Height="30"/>
+            <Label x:Name="conditionXaml" Content="condition" HorizontalAlignment="Left" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="199" Height="30"/>
         </StackPanel>
-        <Label x:Name="priceXaml" Content="buy price" Margin="1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="75"/>
-        <Label x:Name="priceGoalXaml" Content="price goal" Margin="1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="79"/>
-        <Label x:Name="quantityXaml" Content="quantity" Margin="1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="70"/>
-        <Label x:Name="currrentPriceXaml" Content="current  price" Margin="1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="105"/>
+        <Label x:Name="buyPriceXaml" Content="buy price" Margin="5,18,1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="75" HorizontalAlignment="Left"/>
+        <Label x:Name="priceGoalXaml" Content="price goal" Margin="5,18,1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="79" HorizontalAlignment="Left"/>
+        <Label x:Name="quantityXaml" Content="quantity" Margin="5,18,1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="68" HorizontalAlignment="Left"/>
+        <Label x:Name="currrentPriceXaml" Content="current  price" Margin="5,18,1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="97" HorizontalAlignment="Left"/>
 
-        <TextBlock Margin="1.5,23,1.5,16" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6"  x:Name="txtblo1" Width="80" HorizontalAlignment="Left"  Height="25">
+        <TextBlock Margin="5,23,1.5,16" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6"  x:Name="txtblo1" Width="78" HorizontalAlignment="Left"  Height="25">
             <Hyperlink Name="Hyperlink" NavigateUri="https://steamcommunity.com/market/listings/730/Shattered%20Web%20Case"  RequestNavigate="OnRequestNavigate">view page</Hyperlink>
         </TextBlock>
 
 
-        <Label x:Name="profitXaml" Content="profit" Margin="1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="58"/>
-        <Label x:Name="profitWithTaxesXaml" Content="profit with taxes" Margin="1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="124"/>
-        <Button Content="" Height="32" VerticalAlignment="Center" Width="36" Margin="0" RenderTransformOrigin="0.542,0.511" Click="Button_Click">
+        <Label x:Name="profitXaml" Content="profit" Margin="5,18,1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="79" HorizontalAlignment="Left"/>
+        <Label x:Name="profitWithTaxesXaml" Content="profit with taxes" Margin="5,18,1.5,18" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#000097E6" Width="99" HorizontalAlignment="Left"/>
+        <Button Content="" Height="32" VerticalAlignment="Center" Width="36" Margin="5,0,0,0" RenderTransformOrigin="0.542,0.511" Click="Button_Click" HorizontalAlignment="Left">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>

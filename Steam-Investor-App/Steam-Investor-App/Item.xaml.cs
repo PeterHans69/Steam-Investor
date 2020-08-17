@@ -25,16 +25,59 @@ namespace Steam_Investor_App
     {
 
         string url;
-        public Item(string name, string condition,string quantity,string price, string priceGoal)
+        public Item(string name, string condition,string quantity,string buyPrice, string priceGoal, string price)
         {
             InitializeComponent();
 
-            this.priceGoalXaml.Content = priceGoal;
-            this.itemNameXaml.Content = name;
-            this.conditionXaml.Content = condition;
-            this.quantityXaml.Content = quantity;
-            this.priceXaml.Content = price;
-            if(condition!="No Condition")
+            priceGoalXaml.Content = priceGoal;
+            itemNameXaml.Content = name;
+            conditionXaml.Content = condition;
+            quantityXaml.Content = quantity;
+            buyPriceXaml.Content = buyPrice;
+            currrentPriceXaml.Content = price;
+
+            double profit= Convert.ToDouble(FormatDouble(price)) - Convert.ToDouble(buyPrice);
+            double d_quantity = Convert.ToDouble(quantity);
+            profitXaml.Content = Math.Round(profit*d_quantity, 2); ;
+            double taxes = profit / 100 * 15;
+            double profitWithTaxes;
+            if (profit >= 0)
+            {
+                 profitWithTaxes = Math.Round((profit - taxes) * d_quantity, 2);
+            }
+            else
+            {
+                profitWithTaxes = Math.Round((profit + taxes) * d_quantity, 2);
+            }
+            
+            profitWithTaxesXaml.Content = profitWithTaxes;
+            
+            //Set colors of the Labels
+            BrushConverter bc = new BrushConverter();
+            if (profit > 0)
+            {
+                profitXaml.Foreground = (Brush)bc.ConvertFrom("#44bd32");
+            }
+            else
+            {
+                profitXaml.Foreground = (Brush)bc.ConvertFrom("#e84118");
+            }
+
+            if (profitWithTaxes > 0)
+            {
+               profitWithTaxesXaml.Foreground = (Brush)bc.ConvertFrom("#44bd32");
+            }
+            else
+            {
+                profitWithTaxesXaml.Foreground = (Brush)bc.ConvertFrom("#e84118");
+            }
+
+
+
+
+
+
+            if (condition!="No Condition")
             {
                 url= "https://steamcommunity.com/market/listings/730/" + name + " (" + condition+")";
                 
@@ -47,23 +90,59 @@ namespace Steam_Investor_App
             Uri myUri = new Uri(url, UriKind.Absolute); //makes new uri with correct link
             Hyperlink.NavigateUri = myUri;
 
-            //save item in Array
-            SteamItemForJson item = new SteamItemForJson();
-            item.itemName = name;
-            item.itemQuantity = quantity;
-            item.ItemBuyPrice = price;
-            item.ItemPriceGoal = priceGoal;
-            item.itemUrl = url;
-            item.itemCondition = condition;
-
-            MySteamItems.AddItemToJSON(item);
+            
 
         }
+        public string FormatDouble(string entrance)
+        {
+            string exit="";
+            foreach(char myChar in entrance)
+            {
+                if(myChar == '0' || myChar =='1'|| myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '.' || myChar == '7' || myChar == '8' || myChar == '9'|| myChar ==',')
+                {
+                    exit = exit + myChar;
+                }
+            }
+            Debug.WriteLine(exit);
+            return exit;
+        }
 
-        
+        public double FormatProfitWithTaxes(double _entrance) //So I dont have 3 	position after decimal point
+        {
+            string entrance = Convert.ToString(_entrance);
+            int counter = 0;
+            string exit = "";
+            bool commaAppeared = false;
+            foreach (char myChar in entrance)
+            {
+                if ( myChar == '.')
+                {
+                    commaAppeared = true;
+                }
+                if (commaAppeared==true)
+                {
+                    counter++;
+                }
+                exit = exit + myChar;
+                if (counter <= 2)
+                {
+                    Debug.WriteLine(exit+"fsdfsf");
+                    return Convert.ToDouble(exit);
+                }
+                
+            }
+
+            return Convert.ToDouble(exit);
+        }
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            (this.Parent as StackPanel).Children.Remove(this);
+            
+            MySteamItems.removeJsonItem((this.Parent as StackPanel).Children.IndexOf(this));//removes item from MySteamItems.json list
+
+            
+            (this.Parent as StackPanel).Children.Remove(this);// removes the item froom the usercontrol
 
         }
         private void OnRequestNavigate(object sender, RequestNavigateEventArgs e)

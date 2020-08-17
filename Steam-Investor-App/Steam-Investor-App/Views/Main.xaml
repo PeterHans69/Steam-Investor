@@ -9,14 +9,14 @@
     <Grid  Background="#273c75" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,-126" Width="1000" Height="800">
         <StackPanel Background="#192a56" Height="407" Margin="40,0,40,40" Width="897" VerticalAlignment="Bottom" HorizontalAlignment="Center">
             <DockPanel Height="55" VerticalAlignment="Top" Width="896" HorizontalAlignment="Center" Background="#FF0097E6" LastChildFill="False" Margin="0,0,1,0">
-                <Label Content="item" HorizontalAlignment="Center" Margin="6,14,0,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="220"/>
-                <Label Content="buy price" HorizontalAlignment="Center" Margin="1.5,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="75"/>
-                <Label Content="price goal" HorizontalAlignment="Center" Margin="1.5,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="79"/>
-                <Label Content="quantity" HorizontalAlignment="Center" Margin="1.5,14,1.5,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="70"/>
-                <Label Content="current  price" HorizontalAlignment="Center" Margin="1.5,14,1.5,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="105"/>
-                <Label Content="view page" HorizontalAlignment="Center" Margin="1.5,14,1.5,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="84"/>
-                <Label Content="profit" HorizontalAlignment="Center" Margin="1.5,14,1.5,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="58"/>
-                <Label Content="profit with taxes" HorizontalAlignment="Center" Margin="1.5,14,1.5,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="124"/>
+                <Label Content="item" HorizontalAlignment="Left" Margin="5,0,0,0" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="200" VerticalAlignment="Center"/>
+                <Label Content="buy price" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="75"/>
+                <Label Content="price goal" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="79"/>
+                <Label Content="quantity" HorizontalAlignment="Left" Margin="5,14,0,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="70"/>
+                <Label Content="current  price" HorizontalAlignment="Left" Margin="5,14,0,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="111"/>
+                <Label Content="view page" HorizontalAlignment="Left" Margin="5,14,0,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="84"/>
+                <Label Content="profit" HorizontalAlignment="Left" Margin="5,14,0,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="58"/>
+                <Label Content="profit with taxes" HorizontalAlignment="Left" Margin="5,14,0,13" VerticalAlignment="Center" FontFamily="Arial" Foreground="#FFF5F6FA" FontSize="16" Background="#990097E6" Width="124"/>
             </DockPanel>
             <ScrollViewer VerticalScrollBarVisibility="Auto" Height="296" Margin="0,0,-26,0">
                 <StackPanel   x:Name="ItemList" Width="897" HorizontalAlignment="Left" >

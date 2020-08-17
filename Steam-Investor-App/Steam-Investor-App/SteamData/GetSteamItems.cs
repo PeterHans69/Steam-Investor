@@ -15,6 +15,7 @@ namespace Steam_Investor_App.SteamData
     using System.IO;
     using System.Net.Http;
     using System.Threading;
+    using System.Windows;
 
     namespace SteamMarketJson
     {
@@ -31,17 +32,17 @@ namespace Steam_Investor_App.SteamData
         public class AssetDescription
         {
             //public int appid { get; set; }
-           // public string classid { get; set; }
+            // public string classid { get; set; }
             //public string instanceid { get; set; }
             //public string background_color { get; set; }
-           // public string icon_url { get; set; }
+            // public string icon_url { get; set; }
             //public int tradable { get; set; }
             //public string name { get; set; }
-           // public string name_color { get; set; }
-           // public string type { get; set; }
-           // public string market_name { get; set; }
-           // public string market_hash_name { get; set; }
-           // public int commodity { get; set; }
+            // public string name_color { get; set; }
+            // public string type { get; set; }
+            // public string market_name { get; set; }
+            // public string market_hash_name { get; set; }
+            // public int commodity { get; set; }
         }
 
         public class Result
@@ -67,8 +68,13 @@ namespace Steam_Investor_App.SteamData
             public List<Result> results { get; set; }
         }
 
-        public static class GetSteamItems
+        public class GetSteamItems
         {
+            public GetSteamItems()
+            {
+
+            }
+
             static HttpClient httpClient = new HttpClient();
 
             private const string BASE_URL = "https://steamcommunity.com/market/search/render/?search_descriptions=0&sort_column=default&sort_dir=desc&appid=730&norender=1&count=100&start=";
@@ -98,8 +104,9 @@ namespace Steam_Investor_App.SteamData
                         {
                             results.AddRange(rootObject.results);
                         }
+                        start += 100;
                     }
-                    catch( Exception ex)
+                    catch (Exception ex)
                     {
                         errors++;
                         Debug.WriteLine("Error" + ex);
@@ -111,7 +118,7 @@ namespace Steam_Investor_App.SteamData
                         }
                         continue;
                     }
-                    start += 100;
+                    
                     Debug.WriteLine(start);
                     Debug.WriteLine(rootObject.total_count);
                     Thread.Sleep(7000);
@@ -131,20 +138,49 @@ namespace Steam_Investor_App.SteamData
                 File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"), jsonResult);
 
 
-                
 
-                
+
+
             }
 
-            public static Task GetItemPrice(string name, string condition, int currency)
+            public static async Task<string> GetItemPrice(string name, string condition, int currency)
             {
-                using (WebClient w = new WebClient())
+                Debug.WriteLine(currency);
+                HttpResponseMessage responseData = null;
+                GetItemRoot rootObject = null;
+                try
                 {
-                    string responseData = w.DownloadString("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name + " " + "(" + condition + ")");
-                    return Task.CompletedTask;
+
+                    if (condition != "No Condition")
+                    {
+                        responseData = httpClient.GetAsync("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name + " " + "(" + condition + ")").Result;
+                    }
+                    else
+                    {
+                        responseData = httpClient.GetAsync("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name).Result;
+
+                    }
+                    Debug.WriteLine("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name);
+                    Debug.WriteLine(currency);
+                    var body = responseData.Content.ReadAsStringAsync().Result;
+                    rootObject = JsonConvert.DeserializeObject<GetItemRoot>(body);
+
+
+                    return rootObject.median_price;
                 }
+                catch
+                {
+                    MessageBox.Show("Too many API request try it in a minute again");
+                    return null;
+                }
+
+
+            }
+            public class GetItemRoot
+            {
+                public string median_price { get; set; }
             }
         }
     }
-    
+
 }

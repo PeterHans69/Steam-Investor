@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ using System.Windows.Shapes;
 using DocumentFormat.OpenXml.Drawing.Charts;
 using LiveCharts;
 using LiveCharts.Wpf;
+using Newtonsoft.Json;
+using Steam_Investor_App.SteamData;
 using Steam_Investor_App.ViewModels;
 using Steam_Investor_App.Windows;
 
@@ -33,6 +36,7 @@ namespace Steam_Investor_App.Views
            //this.pieChart();
             
             this.CartesianMonth();
+            loadMySteamItems();
             
         }
         //Cartesian chart
@@ -79,6 +83,29 @@ namespace Steam_Investor_App.Views
         {
             
             
+        }
+        List<SteamItemForJson> mySteamItems;
+        private void loadMySteamItems()
+        {
+            var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"));
+            try
+            {
+                mySteamItems = JsonConvert.DeserializeObject<List<SteamItemForJson>>(fileContent);
+            }
+            catch
+            {
+
+            }
+            if (mySteamItems == null)
+            {
+                mySteamItems = new List<SteamItemForJson>();
+            }
+            foreach(SteamItemForJson JsonItem in mySteamItems)
+            {
+                Item item = new Item(JsonItem.itemName,JsonItem.itemCondition,JsonItem.itemQuantity,JsonItem.ItemBuyPrice,JsonItem.ItemPriceGoal,JsonItem.itemPrice);
+
+                ItemList.Children.Add(item);
+            }
         }
     }
 }
