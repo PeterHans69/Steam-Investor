@@ -86,7 +86,7 @@ namespace Steam_Investor_App
             {
                 url = "https://steamcommunity.com/market/listings/730/" + name;
             }
-            Debug.WriteLine(url);
+           
             Uri myUri = new Uri(url, UriKind.Absolute); //makes new uri with correct link
             Hyperlink.NavigateUri = myUri;
 
@@ -103,7 +103,7 @@ namespace Steam_Investor_App
                     exit = exit + myChar;
                 }
             }
-            Debug.WriteLine(exit);
+            
             return exit;
         }
 

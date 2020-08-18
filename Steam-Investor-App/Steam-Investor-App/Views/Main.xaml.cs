@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -33,11 +34,16 @@ namespace Steam_Investor_App.Views
         public Main()
         {
             InitializeComponent();
-           //this.pieChart();
-            
+           
             this.CartesianMonth();
+
             loadMySteamItems();
-            
+            refresh.Content = "loading";
+            Task.Run(() => MySteamItems.UpdateAllItems());
+            Task.WaitAll();
+            refresh.Content = "refresh";
+            loadMySteamItems();
+
         }
         //Cartesian chart
 
@@ -82,15 +88,17 @@ namespace Steam_Investor_App.Views
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             
+            Task.Run(() =>  MySteamItems.UpdateAllItems());
+            loadMySteamItems();
             
         }
-        List<SteamItemForJson> mySteamItems;
+        List<SteamItemJson> mySteamItems;
         private void loadMySteamItems()
         {
             var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"));
             try
             {
-                mySteamItems = JsonConvert.DeserializeObject<List<SteamItemForJson>>(fileContent);
+                mySteamItems = JsonConvert.DeserializeObject<List<SteamItemJson>>(fileContent);
             }
             catch
             {
@@ -98,10 +106,13 @@ namespace Steam_Investor_App.Views
             }
             if (mySteamItems == null)
             {
-                mySteamItems = new List<SteamItemForJson>();
+                mySteamItems = new List<SteamItemJson>();
             }
-            foreach(SteamItemForJson JsonItem in mySteamItems)
+
+            ItemList.Children.Clear();
+            foreach(SteamItemJson JsonItem in mySteamItems)
             {
+                
                 Item item = new Item(JsonItem.itemName,JsonItem.itemCondition,JsonItem.itemQuantity,JsonItem.ItemBuyPrice,JsonItem.ItemPriceGoal,JsonItem.itemPrice);
 
                 ItemList.Children.Add(item);

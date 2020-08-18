@@ -14,6 +14,7 @@ namespace Steam_Investor_App.Windows
     /// </summary>
     public partial class AddItemWindows : Window
     {
+        
         StackPanel sp;
         public AddItemWindows(StackPanel stackpanel) //needs the stack panel to add the item
         {
@@ -69,7 +70,7 @@ namespace Steam_Investor_App.Windows
                 int currency = 3;//I made this variables, to avoid the Exception that this thread is used by another process
                 string name = ItemNameWPF.Text;
                 string condition = getSelectcetdCondition();
-                var price = Task.Run(() => GetSteamItems.GetItemPrice(name, condition, currency).Result);
+                var price = Task.Run(() => GetSteamItems.GetItemPriceForAddItem(name, condition, currency).Result);
 
                 if (price != null)
                 {
@@ -77,7 +78,7 @@ namespace Steam_Investor_App.Windows
                     sp.Children.Add(item);
 
                     //save item in Array
-                    SteamItemForJson JsonItem = new SteamItemForJson();
+                    SteamItemJson JsonItem = new SteamItemJson();
                     JsonItem.itemName = ItemNameWPF.Text;
                     JsonItem.itemQuantity = quantityWPF.Text;
                     JsonItem.ItemBuyPrice = pricePerItemWPF.Text;
@@ -114,7 +115,7 @@ namespace Steam_Investor_App.Windows
             {
                 return false;
             }
-            Debug.WriteLine(ItemNameWPF.Text + " " + getSelectcetdCondition());
+            
             if (getSelectcetdCondition() == "No Condition")
             {
                 if (SteamItem.searchforItem(ItemNameWPF.Text) == true)

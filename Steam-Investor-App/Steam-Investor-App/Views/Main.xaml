@@ -86,7 +86,7 @@
 
             </Button>
 
-            <Button  Content="refresh" Height="48" Width="218" Margin="5,0,0,0"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click_1">
+            <Button Name="refresh"  Content="refresh" Height="48" Width="218" Margin="5,0,0,0"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click_1">
 
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
