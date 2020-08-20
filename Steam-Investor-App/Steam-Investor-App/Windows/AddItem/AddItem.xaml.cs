@@ -71,9 +71,11 @@ namespace Steam_Investor_App.Windows
                 string name = ItemNameWPF.Text;
                 string condition = getSelectcetdCondition();
                 var price = Task.Run(() => GetSteamItems.GetItemPriceForAddItem(name, condition, currency).Result);
+                Debug.WriteLine("price (AddITemClass): " + price.Result);
 
-                if (price != null)
+                if (price.Result != null)
                 {
+                    Debug.WriteLine("price (AddITemClass) ist != null");
                     Item item = new Item(ItemNameWPF.Text, getSelectcetdCondition(), quantityWPF.Text, pricePerItemWPF.Text, priceGoalWPF.Text, price.Result); //Creates a new item
                     sp.Children.Add(item);
 
@@ -89,6 +91,8 @@ namespace Steam_Investor_App.Windows
                     MySteamItems.AddItemToJSON(JsonItem);
                     this.Close();
                 }
+                
+                
             }
             
 

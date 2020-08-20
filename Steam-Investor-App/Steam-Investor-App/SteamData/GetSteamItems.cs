@@ -14,6 +14,7 @@ namespace Steam_Investor_App.SteamData
     using System.Collections.Generic;
     using System.IO;
     using System.Net.Http;
+    using System.Runtime.CompilerServices;
     using System.Threading;
     using System.Windows;
 
@@ -178,35 +179,46 @@ namespace Steam_Investor_App.SteamData
 
             }
 
-            public static async Task<string> GetItemPrice(string name, string condition, int currency) //This funktion is only for MySteamItems Class! Because of the sleep(3000);
+
+            static int counter = 0;//debug
+            public static async Task<string> GetItemPrice(string name, string condition, int currency) //This funktion is only for MySteamItems Class! Because of the sleep(3000) instead of ;
             {
-                
+
                 HttpResponseMessage responseData = null;
                 GetItemRoot rootObject = null;
                 while (true)
                 {
+                    counter++;
 
-
-                    if (condition != "No Condition")
+                    try
                     {
-                        responseData = httpClient.GetAsync("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name + " " + "(" + condition + ")").Result;
+                        if (condition != "No Condition")
+                        {
+                            responseData = httpClient.GetAsync("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name + " " + "(" + condition + ")").Result;
+                        }
+                        else
+                        {
+                            responseData = httpClient.GetAsync("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name).Result;
+
+                        }
+
+                        var body = responseData.Content.ReadAsStringAsync().Result;
+                        rootObject = JsonConvert.DeserializeObject<GetItemRoot>(body);
                     }
-                    else
+                    catch
                     {
-                        responseData = httpClient.GetAsync("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name).Result;
 
                     }
 
-                    var body = responseData.Content.ReadAsStringAsync().Result;
-                    rootObject = JsonConvert.DeserializeObject<GetItemRoot>(body);
-
-                    if (rootObject.median_price != null)
+                    if (rootObject != null)
                     {
+                        Debug.WriteLine("loading        "+rootObject.median_price);
                         return rootObject.median_price;
                     }
                     else
                     {
-                        Debug.WriteLine("null");
+                        Debug.WriteLine("null"+counter);
+
                         Thread.Sleep(20000);
                     }
                                         

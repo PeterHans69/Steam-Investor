@@ -65,7 +65,7 @@ namespace Steam_Investor_App.SteamData
 
         }
 
-        public static void UpdateAllItems()
+        public static Task UpdateAllItems()
         {
             
              List<SteamItemJson> myNewSteamItems = new List<SteamItemJson>();
@@ -78,27 +78,22 @@ namespace Steam_Investor_App.SteamData
             {
 
             }
-            if (mySteamItems == null)
+            if (mySteamItems != null)
             {
-                mySteamItems = new List<SteamItemJson>();
+                foreach (SteamItemJson item in mySteamItems)
+                {
+                   Task.Run(async () => item.itemPrice = await GetSteamItems.GetItemPrice(item.itemName, item.itemCondition, currency)).Wait();
+                  
+                }
+                var jsonResult = JsonConvert.SerializeObject(mySteamItems);
+                File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"), jsonResult);
             }
-            foreach (SteamItemJson item in mySteamItems)
-            {
-                item.itemPrice = GetSteamItems.GetItemPrice(item.itemName, item.itemCondition, currency).Result;
-            }
-            var jsonResult = JsonConvert.SerializeObject(mySteamItems);
-            File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"), jsonResult);
-            
+
+            return Task.CompletedTask;
         }
 
-
-        static HttpClient httpClient = new HttpClient();
-
-        private const string BASE_URL = "https://steamcommunity.com/market/search/render/?search_descriptions=0&sort_column=default&sort_dir=desc&appid=730&norender=1&count=100&start=";
-
-        static RootObject rootObject = null;
-        
-        
+              
+                
     }
     public class SteamItemJson
     {

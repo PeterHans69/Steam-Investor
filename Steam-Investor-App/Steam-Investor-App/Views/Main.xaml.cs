@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -37,12 +38,8 @@ namespace Steam_Investor_App.Views
            
             this.CartesianMonth();
 
-            loadMySteamItems();
-            refresh.Content = "loading";
-            Task.Run(() => MySteamItems.UpdateAllItems());
-            Task.WaitAll();
-            refresh.Content = "refresh";
-            loadMySteamItems();
+            
+            loadAllItems();
 
         }
         //Cartesian chart
@@ -87,10 +84,8 @@ namespace Steam_Investor_App.Views
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
-            Task.Run(() =>  MySteamItems.UpdateAllItems());
-            loadMySteamItems();
-            
+
+            loadAllItems();                      
         }
         List<SteamItemJson> mySteamItems;
         private void loadMySteamItems()
@@ -118,5 +113,32 @@ namespace Steam_Investor_App.Views
                 ItemList.Children.Add(item);
             }
         }
+        private void loadAllItems()
+        {
+            new Thread(() => //creating a new thread, so that u can still interact with the UI
+            {
+                this.Dispatcher.Invoke(() => //gives the button free, from the máin thread
+                {
+
+                    refresh.Content = "loading";
+                    refresh.IsEnabled = false;
+                });
+
+
+                MySteamItems.UpdateAllItems();
+
+                this.Dispatcher.Invoke(() =>
+                {
+
+                    refresh.Content = "refresh";
+                    refresh.IsEnabled = true;
+                });
+
+            }).Start();
+            loadMySteamItems();
+        }
+        
+
+        
     }
 }
