@@ -27,17 +27,17 @@
             <DockPanel Height="55" VerticalAlignment="Center" Width="895" HorizontalAlignment="Center" Background="#FF0097E6" LastChildFill="False" Margin="1,0">
                 <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="40,0,20,4" VerticalAlignment="Center">
                     <Label Content="total:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA"/>
-                    <Label Content="234€" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FF4CD137"/>
+                    <Label Name="totalXaml" Content="234€" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FF4CD137"/>
 
                 </DockPanel>
                 <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="20,0,20,4" VerticalAlignment="Center">
                     <Label Content="profit:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA"/>
-                    <Label Content="234€" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FF4CD137"/>
+                    <Label Name="overAllProfitXaml2" Content="234€" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FF4CD137"/>
 
                 </DockPanel>
                 <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="20,0,40,4" VerticalAlignment="Center">
                     <Label Content="profi with taxes:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FFF5F6FA"/>
-                    <Label Content="234€" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FF4CD137"/>
+                    <Label Name="profitWithTaxes" Content="234€" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="22" Foreground="#FF4CD137"/>
 
                 </DockPanel>
             </DockPanel>
@@ -56,9 +56,9 @@
 
         </Wpf:CartesianChart>
 
-        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="405,217,405,532" VerticalAlignment="Center">
-            <Label Content="profit:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="36" Foreground="#FFF5F6FA"/>
-            <Label Content="234€" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontFamily="Arial" FontSize="36" Foreground="#FF4CD137"/>
+        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="403,217,6,532" VerticalAlignment="Center" Width="591">
+            <Label Content="profit:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontFamily="Arial" FontSize="36" Foreground="#FFF5F6FA"/>
+            <Label x:Name="overAllProfitXaml" Content="234€" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontFamily="Arial" FontSize="36" Foreground="#FF4CD137" Width="490"/>
 
         </DockPanel>
         <StackPanel HorizontalAlignment="Center" Height="50"  Margin="0,277,0,0" VerticalAlignment="Top" Width="446" Orientation="Horizontal">

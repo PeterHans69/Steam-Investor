@@ -33,12 +33,12 @@ namespace Steam_Investor_App
             itemNameXaml.Content = name;
             conditionXaml.Content = condition;
             quantityXaml.Content = quantity;
-            buyPriceXaml.Content = buyPrice;
+            buyPriceXaml.Content = buyPrice ;
             currrentPriceXaml.Content = price;
 
             double profit= Convert.ToDouble(FormatDouble(price)) - Convert.ToDouble(buyPrice);
             double d_quantity = Convert.ToDouble(quantity);
-            profitXaml.Content = Math.Round(profit*d_quantity, 2); ;
+            profitXaml.Content = Math.Round(profit*d_quantity, 2) ;
             double taxes = profit / 100 * 15;
             double profitWithTaxes;
             if (profit >= 0)
@@ -50,7 +50,7 @@ namespace Steam_Investor_App
                 profitWithTaxes = Math.Round((profit + taxes) * d_quantity, 2);
             }
             
-            profitWithTaxesXaml.Content = profitWithTaxes;
+            profitWithTaxesXaml.Content = profitWithTaxes ;
             
             //Set colors of the Labels
             BrushConverter bc = new BrushConverter();

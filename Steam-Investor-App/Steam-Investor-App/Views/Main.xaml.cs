@@ -40,7 +40,7 @@ namespace Steam_Investor_App.Views
 
             
             loadAllItems();
-
+            loadConclusion();
         }
         //Cartesian chart
 
@@ -83,9 +83,9 @@ namespace Steam_Investor_App.Views
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-            loadAllItems();                      
+        {            
+            loadAllItems();
+            loadConclusion();
         }
         List<SteamItemJson> mySteamItems;
         private void loadMySteamItems()
@@ -136,6 +136,51 @@ namespace Steam_Investor_App.Views
 
             }).Start();
             loadMySteamItems();
+        }
+
+
+        double overAllProfit = 0;
+        double overAllProfitWithTaxes = 0;
+        double total = 0;
+        private void loadConclusion()
+        {
+            BrushConverter bc = new BrushConverter();
+            
+            foreach(Item item in ItemList.Children)
+            {
+                overAllProfit = overAllProfit + Convert.ToDouble(item.profitXaml.Content);
+                overAllProfitWithTaxes = overAllProfitWithTaxes + Convert.ToDouble(item.profitWithTaxesXaml.Content);
+                total = Convert.ToDouble(item.buyPriceXaml.Content) + Convert.ToDouble(item.profitXaml.Content);
+            }
+            totalXaml.Content = Math.Round(total,2)+" $";
+            
+            profitWithTaxes.Content = Math.Round(overAllProfitWithTaxes,2)+" $";
+
+            if (overAllProfitWithTaxes >= 0)
+            {
+                profitWithTaxes.Foreground = (Brush)bc.ConvertFrom("#44bd32");
+            }
+            else
+            {
+                profitWithTaxes.Foreground = (Brush)bc.ConvertFrom("#e84118");
+            }
+
+
+            overAllProfitXaml.Content = Math.Round( overAllProfit,2) + " $";
+            overAllProfitXaml2.Content = Math.Round( overAllProfit,2) + " $";
+            if (overAllProfit >= 0)
+            {
+                overAllProfitXaml.Foreground= (Brush)bc.ConvertFrom("#44bd32");
+                overAllProfitXaml2.Foreground = (Brush)bc.ConvertFrom("#44bd32");
+
+            }
+            else
+            {
+                overAllProfitXaml.Foreground = (Brush)bc.ConvertFrom("#e84118");
+                overAllProfitXaml2.Foreground = (Brush)bc.ConvertFrom("#e84118");
+            }
+        
+            
         }
         
 

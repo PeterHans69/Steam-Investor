@@ -56,7 +56,7 @@ namespace Steam_Investor_App.SteamData
                         {
                             // Assume valid JSON, known schema
                             reader.Read();
-                            if (reader.GetString().Contains(item))
+                            if (reader.GetString().Equals(item))
                             {
                                 count++;
                                 return true;
