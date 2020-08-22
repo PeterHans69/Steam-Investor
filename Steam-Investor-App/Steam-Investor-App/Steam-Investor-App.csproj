@@ -200,6 +200,9 @@
   <ItemGroup>
     <Resource Include="minus-square-mouseOver.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="acf24e4e-b324-4c80-8678-a9fbb685fe85_200x200.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />
 </Project>
