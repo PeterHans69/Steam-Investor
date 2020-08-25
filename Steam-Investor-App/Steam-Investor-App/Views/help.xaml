@@ -5,8 +5,58 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Steam_Investor_App.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#FF8C7AE6">
-            
+             d:DesignHeight="450" d:DesignWidth="800" Width="1000" Height="800">
+    <Grid Background="#FF273C75">
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" Width="200" Height="200" BorderBrush="#00707070" Foreground="#00000000" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="iconfinder_discord_2308078.png"/>
+            </Button.Background>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#353b48" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label Content="Discord for help and improvement:" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="573" Foreground="#FFDCDDE1" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Github page:" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="573" Foreground="#FFDCDDE1" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Width="200" Height="200" BorderBrush="#00707070" Foreground="#00000000" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="GitHub-Mark-120px-plus.png"/>
+            </Button.Background>
+
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#353b48" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True"/>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+
     </Grid>
 </UserControl>

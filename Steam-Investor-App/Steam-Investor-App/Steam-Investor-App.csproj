@@ -180,6 +180,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="CharData.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -202,6 +203,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="acf24e4e-b324-4c80-8678-a9fbb685fe85_200x200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Date.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\iconfinder_discord_2308078.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\GitHub-Mark-120px-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\GitHub-Mark-Light-120px-plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />

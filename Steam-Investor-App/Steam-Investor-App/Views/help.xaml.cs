@@ -24,5 +24,10 @@ namespace Steam_Investor_App.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://discord.gg/eWvVkaS");
+        }
     }
 }

@@ -23,6 +23,9 @@ using Newtonsoft.Json;
 using Steam_Investor_App.SteamData;
 using Steam_Investor_App.ViewModels;
 using Steam_Investor_App.Windows;
+using Newtonsoft.Json;
+using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using DocumentFormat.OpenXml.Math;
 
 namespace Steam_Investor_App.Views
 {
@@ -35,36 +38,16 @@ namespace Steam_Investor_App.Views
         public Main()
         {
             InitializeComponent();
-           
-            this.CartesianMonth();
-
-            
             loadAllItems();
             loadConclusion();
+            updateData();
+            CartesianMonth();                       
         }
         //Cartesian chart
 
         
 
-        public void CartesianMonth()
-        {
-            SeriesCollectionMonth = new SeriesCollection
-            {
-                new LineSeries
-                {
-
-                    Title="Profit", Values = new ChartValues<double>{ 232, 400, 600,500,300,234,232, 400, 600, 500, 300, 234, -232, 400, 600, 500, 300, 234, 232, 400, 600, 500, 300, 234, 232, 400, 600, 500, 300, 234, 232 }
-                }
-
-            };
-
-            
-            
-            DataContext = this;
-        }
-        public Func<double, string> yFormatterMonth { get; set; }
-        public SeriesCollection SeriesCollectionMonth { get; set; }
-        public string[] Labels { get; set; }
+        
         
 
         //adds an Item to the stack Panel
@@ -83,9 +66,14 @@ namespace Steam_Investor_App.Views
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
-        {            
+        {
+            updateData();
+            CartesianMonth();
             loadAllItems();
             loadConclusion();
+            
+
+           
         }
         List<SteamItemJson> mySteamItems;
         private void loadMySteamItems()
@@ -144,6 +132,9 @@ namespace Steam_Investor_App.Views
         double total = 0;
         private void loadConclusion()
         {
+            overAllProfit = 0;
+            overAllProfitWithTaxes = 0;
+            total = 0;
             BrushConverter bc = new BrushConverter();
             
             foreach(Item item in ItemList.Children)
@@ -151,6 +142,12 @@ namespace Steam_Investor_App.Views
                 overAllProfit = overAllProfit + Convert.ToDouble(item.profitXaml.Content);
                 overAllProfitWithTaxes = overAllProfitWithTaxes + Convert.ToDouble(item.profitWithTaxesXaml.Content);
                 total = Convert.ToDouble(item.buyPriceXaml.Content) + Convert.ToDouble(item.profitXaml.Content);
+            }
+            if (ItemList.Children.Count == 0)//if there are no items then:
+            {
+                overAllProfit = 0;
+                overAllProfitWithTaxes = 0;
+                total = 0;
             }
             totalXaml.Content = Math.Round(total,2)+" $";
             
@@ -182,8 +179,87 @@ namespace Steam_Investor_App.Views
         
             
         }
-        
 
+        #region Char;
+        double[] CharData = new double[31];
+            
         
+        
+        private void CartesianMonth()
+        {
+            //string data = JsonConvert.SerializeObject(CharData);
+            string data = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\CharData.json"));
+            CharData = JsonConvert.DeserializeObject<double[]>(data);//every number
+
+            int counter = 0;
+            foreach(double d in CharData)
+            {
+                if (d != 0)
+                {
+                    counter++;
+                }
+            }
+            
+            double[] CharData_2 = new double[counter];//every number except for 0
+            counter = 0;
+            foreach (double d in CharData)
+            {
+                if (d != 0)
+                {
+                    CharData_2[counter] = d;
+                    counter++; 
+                }
+            }
+
+
+            SeriesCollectionMonth = new SeriesCollection
+            {
+                new LineSeries
+                {
+
+                    Title="Profit", Values = new ChartValues<double>(CharData_2)
+                }
+
+            };
+
+
+
+            DataContext = this;
+        }//loads Char
+
+        private void updateData()//Updates Char data
+        {
+            string data = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\CharData.json"));
+            CharData = JsonConvert.DeserializeObject<double[]>(data);
+
+            string currentDate = DateTime.Today.AddDays(1).ToString();
+            string lastDate = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\date.txt"));
+
+            if (lastDate == currentDate)//If its the same day
+            {
+                CharData[31] = overAllProfit;//Just change the profit from today
+            }
+            else
+            {
+                for (int i = 0; i <= 30; i++)//if its another day
+                {
+                    Debug.WriteLine("Index :" + i);
+                    CharData[i] = CharData[i + 1];  //backshift  every number and add the profit fromthe current day              
+                }
+                CharData[31] = overAllProfit;
+            }
+            var data_Safe = JsonConvert.SerializeObject(CharData);
+            File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\CharData.json"), data_Safe);
+            File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\date.txt"), currentDate);
+            
+        }
+        public Func<double, string> yFormatterMonth { get; set; }
+        public SeriesCollection SeriesCollectionMonth { get; set; }
+        public string[] Labels { get; set; }
+
+
+
+
+        #endregion
     }
 }

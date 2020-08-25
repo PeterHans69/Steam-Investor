@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Steam_Investor_App.Windows"
         mc:Ignorable="d"
-        Title="AddItem" Height="401.611" Width="460" Background="#273c75">
+        Title="AddItem" Height="401.611" Width="460" Background="#273c75" Icon="/Steam-Investor-App;component/acf24e4e-b324-4c80-8678-a9fbb685fe85_200x200.png">
     <Grid>
         <Button  Content="submit" Height="48" Width="218" Margin="0,301,0,22"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click">
 

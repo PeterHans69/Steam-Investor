@@ -81,7 +81,7 @@ namespace Steam_Investor_App.SteamData
 
             private const string BASE_URL = "https://steamcommunity.com/market/search/render/?search_descriptions=0&sort_column=default&sort_dir=desc&appid=730&norender=1&count=100&start=";
 
-            public static void LoadAllItemsAsync() //async Task
+            public static void LoadAllItems() //async Task
             {
                 int errors = 0;
                 int start = 0;
@@ -113,11 +113,7 @@ namespace Steam_Investor_App.SteamData
                         errors++;
                         Debug.WriteLine("Error" + ex);
                         Thread.Sleep(30000);
-                        if (errors > 100)
-                        {
-                            Debug.WriteLine("quitted while loop");
-                            break;
-                        }
+                        
                         continue;
                     }
 
@@ -127,18 +123,18 @@ namespace Steam_Investor_App.SteamData
                 }
                 while (start < rootObject.total_count);
 
-                // read and deserialize it back
-
-                var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"));
-
-                var items = JsonConvert.DeserializeObject<List<Result>>(fileContent);
+               
 
                 // write to file
 
                 var jsonResult = JsonConvert.SerializeObject(results);
 
                 File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"), jsonResult);
+                // read and deserialize it back
 
+                var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"));
+
+                var items = JsonConvert.DeserializeObject<List<Result>>(fileContent);
 
 
 
