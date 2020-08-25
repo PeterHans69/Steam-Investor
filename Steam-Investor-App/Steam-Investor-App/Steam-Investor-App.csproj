@@ -208,13 +208,16 @@
     <Resource Include="Date.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Views\iconfinder_discord_2308078.png" />
+    <Resource Include="Views\newDiscordIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\GitHub-Mark-120px-plus.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\GitHub-Mark-Light-120px-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\steam.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />

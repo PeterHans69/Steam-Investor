@@ -25,9 +25,19 @@ namespace Steam_Investor_App.Views
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Discord_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://discord.gg/eWvVkaS");
+        }
+
+        private void Github_click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Shynex1234/Steam-Investor");
+        }
+
+        private void Steam_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://steamcommunity.com/id/Shynex/");
         }
     }
 }
