@@ -31,7 +31,11 @@ namespace Steam_Investor_App
 
             priceGoalXaml.Content = priceGoal;
             itemNameXaml.Content = name;
-            conditionXaml.Content = condition;
+            conditionXaml.Content = "";
+            if(condition != "No Condition")
+            {
+                conditionXaml.Content = condition;
+            }
             quantityXaml.Content = quantity;
             buyPriceXaml.Content = buyPrice ;
             currrentPriceXaml.Content = price;
@@ -96,13 +100,18 @@ namespace Steam_Investor_App
         public string FormatDouble(string entrance)
         {
             string exit="";
-            foreach(char myChar in entrance)
-            {
-                if(myChar == '0' || myChar =='1'|| myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '.' || myChar == '7' || myChar == '8' || myChar == '9'|| myChar ==',')
+            
+                foreach (char myChar in entrance)
                 {
-                    exit = exit + myChar;
+                    if (myChar == '0' || myChar == '1' || myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '.' || myChar == '7' || myChar == '8' || myChar == '9' || myChar == ',')
+                    {
+                        exit = exit + myChar;
+                    }
                 }
-            }
+            
+             
+            
+            
             
             return exit;
         }

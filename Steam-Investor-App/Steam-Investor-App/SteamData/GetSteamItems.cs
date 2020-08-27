@@ -12,11 +12,13 @@ namespace Steam_Investor_App.SteamData
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
+    using System.Drawing;
     using System.IO;
     using System.Net.Http;
     using System.Runtime.CompilerServices;
     using System.Threading;
     using System.Windows;
+    using System.Windows.Controls;
 
     namespace SteamMarketJson
     {
@@ -72,74 +74,87 @@ namespace Steam_Investor_App.SteamData
 
         public class GetSteamItems
         {
-            public GetSteamItems()
-            {
 
-            }
+
+            # region loadAllItems
+            public static int Loadeditems;
+            public static int ITemsInTotal;
 
             static HttpClient httpClient = new HttpClient();
 
             private const string BASE_URL = "https://steamcommunity.com/market/search/render/?search_descriptions=0&sort_column=default&sort_dir=desc&appid=730&norender=1&count=100&start=";
 
+            static bool isLoadingItems = false;
             public static void LoadAllItems() //async Task
             {
-                int errors = 0;
-                int start = 0;
-
-                List<Result> results = new List<Result>(); // you probably want to store results only
-
-                RootObject rootObject = null;
-                do
+                
+                
+                if (isLoadingItems==false)
                 {
-                    try // I Used try catch,because I dont exactly know the request limit
+                    isLoadingItems = true;
+                    int errors = 0;
+                    int start = 0;
+
+                    List<Result> results = new List<Result>();
+
+                    RootObject rootObject = null;
+                    do
                     {
-                        //var response = httpClient.GetAsync(BASE_URL + start).Result; // use await instead of .Result when used in methods
-                        //var response = await httpClient.GetAsync(BASE_URL + start);
-                        //var body = await response.Content.ReadAsStringAsync();
-                        var response = httpClient.GetAsync(BASE_URL + start).Result;
-                        var body = response.Content.ReadAsStringAsync().Result;
-                        Debug.WriteLine(BASE_URL + start);
-
-                        rootObject = JsonConvert.DeserializeObject<RootObject>(body);
-
-                        if (rootObject.results != null)
+                        try // I Used try catch,because I dont exactly know the request limit
                         {
-                            results.AddRange(rootObject.results);
-                        }
-                        start += 100;
-                    }
-                    catch (Exception ex)
-                    {
-                        errors++;
-                        Debug.WriteLine("Error" + ex);
-                        Thread.Sleep(30000);
-                        
-                        continue;
-                    }
+                            //var response = httpClient.GetAsync(BASE_URL + start).Result; // use await instead of .Result when used in methods
+                            //var response = await httpClient.GetAsync(BASE_URL + start);
+                            //var body = await response.Content.ReadAsStringAsync();
+                            var response = httpClient.GetAsync(BASE_URL + start).Result;
+                            var body = response.Content.ReadAsStringAsync().Result;
+                            Debug.WriteLine(BASE_URL + start);
 
-                    Debug.WriteLine(start);
-                    Debug.WriteLine(rootObject.total_count);
-                    Thread.Sleep(7000);
+                            rootObject = JsonConvert.DeserializeObject<RootObject>(body);
+
+                            if (rootObject.results != null)
+                            {
+                                results.AddRange(rootObject.results);
+                            }
+                            start += 100;
+                            Loadeditems = start;
+                            ITemsInTotal = rootObject.total_count;
+
+                        }
+                        catch (Exception ex)
+                        {
+                            errors++;
+                            Debug.WriteLine("Error" + ex);
+                            Thread.Sleep(30000);
+
+                            continue;
+                        }
+
+                        Debug.WriteLine(start);
+                        Debug.WriteLine(rootObject.total_count);
+                        Thread.Sleep(7000);
+                    }
+                    while (start < rootObject.total_count);
+
+
+                    Loadeditems = 0;
+                    // write to file
+
+                    var jsonResult = JsonConvert.SerializeObject(results);
+
+                    File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"), jsonResult);
+                    // read and deserialize it back
+
+                    var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"));
+
+                    var items = JsonConvert.DeserializeObject<List<Result>>(fileContent);
+                    isLoadingItems = false;
                 }
-                while (start < rootObject.total_count);
+
+
 
                
-
-                // write to file
-
-                var jsonResult = JsonConvert.SerializeObject(results);
-
-                File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"), jsonResult);
-                // read and deserialize it back
-
-                var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"));
-
-                var items = JsonConvert.DeserializeObject<List<Result>>(fileContent);
-
-
-
-
             }
+            #endregion
 
             public static async Task<string> GetItemPriceForAddItem(string name, string condition, int currency) //This funktion is only for the AddItem Window! Because of MessageBox.Show();
             {
@@ -164,11 +179,21 @@ namespace Steam_Investor_App.SteamData
                     rootObject = JsonConvert.DeserializeObject<GetItemRoot>(body);
 
 
-                    return rootObject.median_price;
+                    Debug.WriteLine("loading        " + rootObject.median_price + "/" + rootObject.lowest_price);
+
+                    if (rootObject.median_price != null)
+                    {
+                        return rootObject.median_price;
+                    }
+                    else
+                    {
+                        return rootObject.lowest_price;
+                    }
                 }
                 catch
                 {
                     MessageBox.Show("Too many API request try it in a minute again");
+                    Debug.WriteLine("Too many API request try it in a minute again");
                     return null;
                 }
 
@@ -208,8 +233,17 @@ namespace Steam_Investor_App.SteamData
 
                     if (rootObject != null)
                     {
-                        Debug.WriteLine("loading        "+rootObject.median_price);
-                        return rootObject.median_price;
+                        Debug.WriteLine("loading        "+rootObject.median_price+"/"+rootObject.lowest_price);
+
+                        if (rootObject.median_price != null)
+                        {
+                            return rootObject.median_price;
+                        }
+                        else
+                        {
+                            return rootObject.lowest_price;
+                        }
+                        
                     }
                     else
                     {
@@ -225,6 +259,7 @@ namespace Steam_Investor_App.SteamData
             public class GetItemRoot
             {
                 public string median_price { get; set; }
+                public string lowest_price { get; set; }
             }
         }
     }

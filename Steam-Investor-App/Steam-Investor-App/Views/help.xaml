@@ -31,8 +31,8 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Label Content="Discord for help and improvement:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Width="573" Foreground="#FFDCDDE1" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label Content="Github page:" HorizontalAlignment="Center" Margin="0,260,0,0" VerticalAlignment="Top" Width="573" Foreground="#FFDCDDE1" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="Discord for help and improvement:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" Width="573" Foreground="#FFDCDDE1" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontStyle="Italic"/>
+        <Label Content="Github page:" HorizontalAlignment="Center" Margin="0,260,0,0" VerticalAlignment="Top" Width="573" Foreground="#FFDCDDE1" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontStyle="Italic"/>
         <Button Content="Button" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Width="144" Height="142" BorderBrush="#00707070" Foreground="#00000000" Click="Github_click">
             <Button.Background>
                 <ImageBrush ImageSource="GitHub-Mark-120px-plus.png" Stretch="None"/>
@@ -56,10 +56,10 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Label Content="donate via Steam" HorizontalAlignment="Center" Margin="0,460,0,0" VerticalAlignment="Top" Width="573" Foreground="#FFDCDDE1" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="donate via Steam:" HorizontalAlignment="Center" Margin="0,460,0,0" VerticalAlignment="Top" Width="573" Foreground="#FFDCDDE1" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontStyle="Italic"/>
         <Button Content="Button" HorizontalAlignment="Center" Margin="0,510,0,0" VerticalAlignment="Top" Width="200" Height="200" BorderBrush="#00707070" Foreground="#00000000" Click="Steam_Click">
             <Button.Background>
-                <ImageBrush ImageSource="steam.png"/>
+                <ImageBrush ImageSource="steam-icon.png"/>
             </Button.Background>
 
             <Button.Style>

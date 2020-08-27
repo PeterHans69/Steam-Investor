@@ -30,10 +30,10 @@ namespace Steam_Investor_App.Windows
         double pricePerItem;
         double priceGoal;
         BrushConverter bc = new BrushConverter();
-        bool everythingIsCorrect;
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            bool everythingIsCorrect=true;
             everythingIsCorrect = true;
             nameLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
             quantityLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa"); 
@@ -70,7 +70,7 @@ namespace Steam_Investor_App.Windows
                 int currency = 3;//I made this variables, to avoid the Exception that this thread is used by another process
                 string name = ItemNameWPF.Text;
                 string condition = getSelectcetdCondition();
-                var price = Task.Run(() => GetSteamItems.GetItemPriceForAddItem(name, condition, currency).Result);
+                var price = GetSteamItems.GetItemPriceForAddItem(name, condition, currency);
                 Debug.WriteLine("price (AddITemClass): " + price.Result);
 
                 if (price.Result != null)
@@ -90,6 +90,10 @@ namespace Steam_Investor_App.Windows
 
                     MySteamItems.AddItemToJSON(JsonItem);
                     this.Close();
+                }
+                else
+                {
+                    Debug.WriteLine("price (AddITemClass) ist == null");
                 }
                 
                 

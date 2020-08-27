@@ -217,7 +217,7 @@
     <Resource Include="Views\GitHub-Mark-Light-120px-plus.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Views\steam.png" />
+    <Resource Include="Views\steam-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />

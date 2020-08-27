@@ -40,7 +40,7 @@ namespace Steam_Investor_App.Views
             InitializeComponent();
             loadAllItems();
             loadConclusion();
-            updateData();
+            updateCharData();
             CartesianMonth();                       
         }
         //Cartesian chart
@@ -67,13 +67,13 @@ namespace Steam_Investor_App.Views
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            updateData();
-            CartesianMonth();
+
+            InitializeComponent(); 
             loadAllItems();
             loadConclusion();
-            
+            updateCharData();
+            CartesianMonth();
 
-           
         }
         List<SteamItemJson> mySteamItems;
         private void loadMySteamItems()
@@ -114,6 +114,7 @@ namespace Steam_Investor_App.Views
 
 
                 MySteamItems.UpdateAllItems();
+
 
                 this.Dispatcher.Invoke(() =>
                 {
@@ -181,7 +182,7 @@ namespace Steam_Investor_App.Views
         }
 
         #region Char;
-        double[] CharData = new double[31];
+        double[] CharData = new double[30];
             
         
         
@@ -227,26 +228,35 @@ namespace Steam_Investor_App.Views
             DataContext = this;
         }//loads Char
 
-        private void updateData()//Updates Char data
+        private void updateCharData()//Updates Char data
         {
             string data = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\CharData.json"));
             CharData = JsonConvert.DeserializeObject<double[]>(data);
+            string currentDate = DateTime.Today.ToString();
 
-            string currentDate = DateTime.Today.AddDays(1).ToString();
-            string lastDate = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\date.txt"));
 
-            if (lastDate == currentDate)//If its the same day
+            if (CharData != null)
             {
-                CharData[31] = overAllProfit;//Just change the profit from today
+                
+                string lastDate = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\date.txt"));
+
+                if (lastDate == currentDate)//If its the same day
+                {
+                    CharData[30] = overAllProfit;//Just change the profit from today
+                }
+                else
+                {
+                    for (int i = 0; i <= 29; i++)//if its another day
+                    {
+                        Debug.WriteLine("Index :" + i);
+                        CharData[i] = CharData[i + 1];  //backshift  every number and add the profit fromthe current day              
+                    }
+                    CharData[30] = overAllProfit;
+                }
             }
             else
             {
-                for (int i = 0; i <= 30; i++)//if its another day
-                {
-                    Debug.WriteLine("Index :" + i);
-                    CharData[i] = CharData[i + 1];  //backshift  every number and add the profit fromthe current day              
-                }
-                CharData[31] = overAllProfit;
+                CharData = new double[31];
             }
             var data_Safe = JsonConvert.SerializeObject(CharData);
             File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\CharData.json"), data_Safe);
