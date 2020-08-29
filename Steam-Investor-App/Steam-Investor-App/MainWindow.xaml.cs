@@ -1,4 +1,6 @@
-﻿using Steam_Investor_App.ViewModels;
+﻿using Steam_Investor_App.SteamData.SteamMarketJson;
+using Steam_Investor_App.ViewModels;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace Steam_Investor_App
@@ -15,7 +17,13 @@ namespace Steam_Investor_App
             
             InitializeComponent();            
             DataContext = mvm;
-
+            Task.Run(() => //CHeck for any new items
+            {
+                if (GetSteamItems.checkForNewItems() == true)
+                {
+                    GetSteamItems.LoadAllItems();//reload all items if there is a new one
+                }
+            });
         }
 
         

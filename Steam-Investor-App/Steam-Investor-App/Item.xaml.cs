@@ -103,7 +103,7 @@ namespace Steam_Investor_App
             
                 foreach (char myChar in entrance)
                 {
-                    if (myChar == '0' || myChar == '1' || myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '.' || myChar == '7' || myChar == '8' || myChar == '9' || myChar == ',')
+                    if (myChar == '0' || myChar == '1' || myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '7' || myChar == '8' || myChar == '9' || myChar == ',')
                     {
                         exit = exit + myChar;
                     }

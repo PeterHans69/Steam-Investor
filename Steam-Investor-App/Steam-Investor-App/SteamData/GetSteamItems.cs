@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 
 namespace Steam_Investor_App.SteamData
 {
+    using DocumentFormat.OpenXml.Spreadsheet;
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using System.Drawing;
     using System.IO;
     using System.Net.Http;
     using System.Runtime.CompilerServices;
+    using System.Text.Json;
     using System.Threading;
     using System.Windows;
     using System.Windows.Controls;
@@ -84,7 +86,7 @@ namespace Steam_Investor_App.SteamData
 
             private const string BASE_URL = "https://steamcommunity.com/market/search/render/?search_descriptions=0&sort_column=default&sort_dir=desc&appid=730&norender=1&count=100&start=";
 
-            static bool isLoadingItems = false;
+            public static bool isLoadingItems = false;
             public static void LoadAllItems() //async Task
             {
                 
@@ -185,9 +187,13 @@ namespace Steam_Investor_App.SteamData
                     {
                         return rootObject.median_price;
                     }
-                    else
+                    else if(rootObject.lowest_price!=null)
                     {
                         return rootObject.lowest_price;
+                    }
+                    else
+                    {
+                        return "0";
                     }
                 }
                 catch
@@ -239,9 +245,13 @@ namespace Steam_Investor_App.SteamData
                         {
                             return rootObject.median_price;
                         }
-                        else
+                        else if(rootObject.lowest_price!=null)
                         {
                             return rootObject.lowest_price;
+                        }
+                        else
+                        {
+                            return "0";
                         }
                         
                     }
@@ -261,7 +271,76 @@ namespace Steam_Investor_App.SteamData
                 public string median_price { get; set; }
                 public string lowest_price { get; set; }
             }
+
+            private static ReadOnlySpan<byte> Utf8Bom => new byte[] { 0xEF, 0xBB, 0xBF };
+            public static bool checkForNewItems()
+            {
+                RootObject rootObject = null;
+                int total = 0;
+                try // I Used try catch,because I dont exactly know the request limit
+                {
+                    //Get Number of Available items
+                    var response = httpClient.GetAsync(BASE_URL+1).Result;
+                    var body = response.Content.ReadAsStringAsync().Result;
+                    
+
+                    rootObject = JsonConvert.DeserializeObject<RootObject>(body);
+
+                    //Number of items i have dowloaded
+                    string fileName = System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json");
+                    ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
+
+                    // Read past the UTF-8 BOM bytes if a BOM exists.
+                    if (jsonReadOnlySpan.StartsWith(Utf8Bom))
+                    {
+                        jsonReadOnlySpan = jsonReadOnlySpan.Slice(Utf8Bom.Length);
+                    }
+
+                    // Or read as UTF-16 and transcode to UTF-8 to convert to a ReadOnlySpan<byte>
+                    //string fileName = "Universities.json";
+                    //string jsonString = File.ReadAllText(fileName);
+                    //ReadOnlySpan<byte> jsonReadOnlySpan = Encoding.UTF8.GetBytes(jsonString);
+
+
+                    
+                    
+
+                    var reader = new Utf8JsonReader(jsonReadOnlySpan);
+
+                    while (reader.Read())
+                    {
+                        JsonTokenType tokenType = reader.TokenType;
+
+                        if(tokenType== JsonTokenType.StartObject)
+                        {
+                            total++;
+                        }
+                    }
+                    
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    
+                    Debug.WriteLine("Error(GetSteamItems.CheckForNewItems" + ex);
+
+                    return false;
+                    
+                }
+                Debug.WriteLine("total items on steam :" + rootObject.total_count);
+                Debug.WriteLine("total items I have :" + total);
+                if (rootObject.total_count > total)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
+
     }
 
 }

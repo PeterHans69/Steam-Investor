@@ -14,12 +14,13 @@ namespace Steam_Investor_App.SteamData
 {
     public static class MySteamItems
     {
-        
-        static int currency = 3;
+
+        static int currency = Properties.Settings.Default.Currency;
         static List<SteamItemJson> mySteamItems;
         
         public static void AddItemToJSON(SteamItemJson item)
         {
+             currency = Properties.Settings.Default.Currency;
             var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"));
             try
             {
@@ -67,8 +68,8 @@ namespace Steam_Investor_App.SteamData
 
         public static Task UpdateAllItems()
         {
-            
-             List<SteamItemJson> myNewSteamItems = new List<SteamItemJson>();
+            currency = Properties.Settings.Default.Currency;
+            List<SteamItemJson> myNewSteamItems = new List<SteamItemJson>();
             var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"));
             try
             {

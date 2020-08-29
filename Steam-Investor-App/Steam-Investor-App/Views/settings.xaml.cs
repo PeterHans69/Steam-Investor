@@ -25,22 +25,28 @@ namespace Steam_Investor_App.Views
     public partial class settings : UserControl
     {
         public settings()
-        {
+        {            
             
             InitializeComponent();
+            loadCurrencySettings();
+            
             Task.Run(() =>
             {
                 this.Dispatcher.Invoke(() =>
                 {
-                    if (GetSteamItems.Loadeditems != 0)
+                    Debug.WriteLine("");
+                    Debug.WriteLine("aesdfasd  " + GetSteamItems.isLoadingItems.ToString());
+                    Debug.WriteLine("");
+                    if (GetSteamItems.isLoadingItems==true)
                     {
-                        
+
                         reload.Content = "loading";
                         reload.IsEnabled = false;
                     }
-                    
-                    
+
+
                 });
+
                 do
                 {
                     
@@ -53,10 +59,25 @@ namespace Steam_Investor_App.Views
                         ProgressBar.Value = GetSteamItems.Loadeditems;
 
                     });
+                    
 
                     Thread.Sleep(7000);
-                } while (GetSteamItems.Loadeditems != 0);
-                
+
+                } while (GetSteamItems.isLoadingItems==true);
+                this.Dispatcher.Invoke(() =>
+                {
+                    
+                    if (GetSteamItems.isLoadingItems == false)
+                    {
+
+                        reload.Content = "reload";
+                        reload.IsEnabled = true;
+                    }
+
+
+                });
+               
+
             });
             
 
@@ -112,6 +133,26 @@ namespace Steam_Investor_App.Views
             
 
         }
+
         
+        private void saveCurrencySetting()
+        {
+            Debug.WriteLine(CurrencyComboBox.SelectedIndex);
+            int currency = CurrencyComboBox.SelectedIndex+1;//+1 because there is no currency with the index 0 on steam, it starts with 1
+
+            Properties.Settings.Default.Currency = currency; //Set the setings
+
+            Properties.Settings.Default.Save();//Saves the settings
+        }
+        private void loadCurrencySettings()
+        {
+            CurrencyComboBox.SelectedIndex = Properties.Settings.Default.Currency-1;
+            Debug.WriteLine(Properties.Settings.Default.Currency);
+        }
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            saveCurrencySetting();
+        }
     }
 }
