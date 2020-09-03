@@ -143,7 +143,7 @@ namespace Steam_Investor_App.SteamData
 
                     var jsonResult = JsonConvert.SerializeObject(results);
 
-                    File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"), jsonResult);
+                    File.WriteAllText(System.IO.Path.GetDirectoryName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName+@"..\..\SteamData\SteamItems.json"), jsonResult);
                     // read and deserialize it back
 
                     var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json"));
@@ -287,8 +287,8 @@ namespace Steam_Investor_App.SteamData
                     rootObject = JsonConvert.DeserializeObject<RootObject>(body);
 
                     //Number of items i have dowloaded
-                    string fileName = System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json");
-                    ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
+                    string fileName =MyPathes.SteamItems;
+                    ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(MyPathes.SteamItems);
 
                     // Read past the UTF-8 BOM bytes if a BOM exists.
                     if (jsonReadOnlySpan.StartsWith(Utf8Bom))
@@ -296,10 +296,7 @@ namespace Steam_Investor_App.SteamData
                         jsonReadOnlySpan = jsonReadOnlySpan.Slice(Utf8Bom.Length);
                     }
 
-                    // Or read as UTF-16 and transcode to UTF-8 to convert to a ReadOnlySpan<byte>
-                    //string fileName = "Universities.json";
-                    //string jsonString = File.ReadAllText(fileName);
-                    //ReadOnlySpan<byte> jsonReadOnlySpan = Encoding.UTF8.GetBytes(jsonString);
+                    
 
 
                     

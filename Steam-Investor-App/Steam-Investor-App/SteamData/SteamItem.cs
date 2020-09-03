@@ -22,7 +22,7 @@ namespace Steam_Investor_App.SteamData
             Debug.WriteLine(item);
 
             // ReadAllBytes if the file encoding is UTF-8:
-            string fileName = System.IO.Path.GetFullPath(@"..\..\SteamData\SteamItems.json");
+            string fileName = MyPathes.SteamItems;
             ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
 
             // Read past the UTF-8 BOM bytes if a BOM exists.

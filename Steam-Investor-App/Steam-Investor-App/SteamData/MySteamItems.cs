@@ -21,7 +21,7 @@ namespace Steam_Investor_App.SteamData
         public static void AddItemToJSON(SteamItemJson item)
         {
              currency = Properties.Settings.Default.Currency;
-            var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"));
+            var fileContent = File.ReadAllText(MyPathes.MySteamItems);
             try
             {
                 mySteamItems = JsonConvert.DeserializeObject<List<SteamItemJson>>(fileContent);
@@ -40,11 +40,11 @@ namespace Steam_Investor_App.SteamData
             //write json
 
             string jsonMySteamItems = JsonConvert.SerializeObject(mySteamItems);
-            File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"), jsonMySteamItems);
+            File.WriteAllText(MyPathes.MySteamItems, jsonMySteamItems);
         }
         public static void removeJsonItem(int index)
         {
-            var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"));
+            var fileContent = File.ReadAllText(MyPathes.MySteamItems);
             try
             {
                 mySteamItems = JsonConvert.DeserializeObject<List<SteamItemJson>>(fileContent);
@@ -62,7 +62,7 @@ namespace Steam_Investor_App.SteamData
             mySteamItems.RemoveAt(index);
             var jsonResult = JsonConvert.SerializeObject(mySteamItems);
 
-            File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"), jsonResult);
+            File.WriteAllText(MyPathes.MySteamItems, jsonResult);
 
         }
 
@@ -70,7 +70,8 @@ namespace Steam_Investor_App.SteamData
         {
             currency = Properties.Settings.Default.Currency;
             List<SteamItemJson> myNewSteamItems = new List<SteamItemJson>();
-            var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"));
+            
+            var fileContent = File.ReadAllText(MyPathes.MySteamItems);
             try
             {
                 mySteamItems = JsonConvert.DeserializeObject<List<SteamItemJson>>(fileContent);
@@ -87,7 +88,7 @@ namespace Steam_Investor_App.SteamData
                   
                 }
                 var jsonResult = JsonConvert.SerializeObject(mySteamItems);
-                File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"), jsonResult);
+                File.WriteAllText(MyPathes.MySteamItems, jsonResult);
             }
 
             return Task.CompletedTask;

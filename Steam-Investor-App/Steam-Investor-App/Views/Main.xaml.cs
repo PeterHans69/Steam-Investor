@@ -23,9 +23,9 @@ using Newtonsoft.Json;
 using Steam_Investor_App.SteamData;
 using Steam_Investor_App.ViewModels;
 using Steam_Investor_App.Windows;
-using Newtonsoft.Json;
 using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using DocumentFormat.OpenXml.Math;
+
 
 namespace Steam_Investor_App.Views
 {
@@ -78,7 +78,7 @@ namespace Steam_Investor_App.Views
         List<SteamItemJson> mySteamItems;
         private void loadMySteamItems()
         {
-            var fileContent = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\SteamData\MySteamItems.json"));
+            var fileContent = File.ReadAllText(MyPathes.MySteamItems);
             try
             {
                 mySteamItems = JsonConvert.DeserializeObject<List<SteamItemJson>>(fileContent);
@@ -105,6 +105,7 @@ namespace Steam_Investor_App.Views
         {
             new Thread(() => //creating a new thread, so that u can still interact with the UI
             {
+                
                 this.Dispatcher.Invoke(() => //gives the button free, from the máin thread
                 {
 
@@ -189,7 +190,7 @@ namespace Steam_Investor_App.Views
         private void CartesianMonth()
         {
             //string data = JsonConvert.SerializeObject(CharData);
-            string data = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\CharData.json"));
+            string data = File.ReadAllText(MyPathes .charData);
             CharData = JsonConvert.DeserializeObject<double[]>(data);//every number
 
             int counter = 0;
@@ -230,7 +231,7 @@ namespace Steam_Investor_App.Views
 
         private void updateCharData()//Updates Char data
         {
-            string data = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\CharData.json"));
+            string data = File.ReadAllText(MyPathes.charData);
             CharData = JsonConvert.DeserializeObject<double[]>(data);
             string currentDate = DateTime.Today.ToString();
 
@@ -238,7 +239,7 @@ namespace Steam_Investor_App.Views
             if (CharData != null)
             {
                 
-                string lastDate = File.ReadAllText(System.IO.Path.GetFullPath(@"..\..\date.txt"));
+                string lastDate = File.ReadAllText(MyPathes.date);
 
                 if (lastDate == currentDate)//If its the same day
                 {
@@ -259,8 +260,8 @@ namespace Steam_Investor_App.Views
                 CharData = new double[31];
             }
             var data_Safe = JsonConvert.SerializeObject(CharData);
-            File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\CharData.json"), data_Safe);
-            File.WriteAllText(System.IO.Path.GetFullPath(@"..\..\date.txt"), currentDate);
+            File.WriteAllText(MyPathes.charData, data_Safe);
+            File.WriteAllText(MyPathes.date, currentDate);
             
         }
         public Func<double, string> yFormatterMonth { get; set; }

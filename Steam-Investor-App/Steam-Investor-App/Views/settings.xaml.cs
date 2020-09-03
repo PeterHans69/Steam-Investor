@@ -1,4 +1,5 @@
-﻿using Steam_Investor_App.SteamData;
+﻿
+using Steam_Investor_App.SteamData;
 using Steam_Investor_App.SteamData.SteamMarketJson;
 using System;
 using System.Collections.Generic;
@@ -25,13 +26,15 @@ namespace Steam_Investor_App.Views
     public partial class settings : UserControl
     {
         public settings()
-        {            
+        {      
+            
             
             InitializeComponent();
             loadCurrencySettings();
             
             Task.Run(() =>
             {
+                
                 this.Dispatcher.Invoke(() =>
                 {
                     Debug.WriteLine("");
@@ -90,6 +93,7 @@ namespace Steam_Investor_App.Views
 
             new Thread(() => //creating a new thread, so that u can still interact with the UI
             {
+                
                 this.Dispatcher.Invoke(() => //gives the button free, from the máin thread
                 {
 

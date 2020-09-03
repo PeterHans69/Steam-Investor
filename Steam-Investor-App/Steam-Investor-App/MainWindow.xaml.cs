@@ -1,7 +1,15 @@
-﻿using Steam_Investor_App.SteamData.SteamMarketJson;
+﻿using NLog;
+using Steam_Investor_App.SteamData.SteamMarketJson;
 using Steam_Investor_App.ViewModels;
+using System;
+using System.Diagnostics;
+using System.Linq.Expressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
+using System.IO;
+using System.Reflection;
 
 namespace Steam_Investor_App
 {
@@ -11,22 +19,34 @@ namespace Steam_Investor_App
     public partial class MainWindow : Window
     {
 
+
+
         MainViewModel mvm = new MainViewModel();
+        
+
+
         public MainWindow()
+
         {
-            
-            InitializeComponent();            
-            DataContext = mvm;
-            Task.Run(() => //CHeck for any new items
-            {
-                if (GetSteamItems.checkForNewItems() == true)
+
+
+                InitializeComponent();
+                DataContext = mvm;
+                Task.Run(() => //Check for any new items
                 {
-                    GetSteamItems.LoadAllItems();//reload all items if there is a new one
-                }
-            });
+                   
+                    if (GetSteamItems.checkForNewItems() == true)
+                    {
+                        GetSteamItems.LoadAllItems();//reload all items if there is a new one
+                    }
+                });
+
         }
 
-        
+
+
+
+
 
         private void MainView_Clicked(object sender, RoutedEventArgs e)
         {
@@ -36,17 +56,14 @@ namespace Steam_Investor_App
         private void helpView_Clicked(object sender, RoutedEventArgs e)
         {
             DataContext = new helpViewModel();
-            
+
         }
 
         private void settingsView_Clicked(object sender, RoutedEventArgs e)
         {
             DataContext = new settingsViewModel();
         }
-        
-       
 
-        
-        
+       
     }
 }
