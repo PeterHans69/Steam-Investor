@@ -2,7 +2,7 @@
  
 Join the [Discord](https://discord.gg/x4kuTWW) if you have any questions or problems.
 
-#For The programmers
+# For The programmers
 I know the code is messy, its my first project I have ever ended.
 Feel free to improve it!
 
