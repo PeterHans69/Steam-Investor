@@ -25,6 +25,7 @@ namespace Steam_Investor_App
     {
 
         string url;
+        public string itemPrice;
         public Item(string name, string condition,string quantity,string buyPrice, string priceGoal, string price)
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace Steam_Investor_App
             quantityXaml.Content = quantity;
             buyPriceXaml.Content = buyPrice ;
             currrentPriceXaml.Content = price;
+            itemPrice = price;
 
             double profit= Convert.ToDouble(FormatDouble(price)) - Convert.ToDouble(buyPrice);
             double d_quantity = Convert.ToDouble(quantity);
@@ -103,9 +105,13 @@ namespace Steam_Investor_App
             
                 foreach (char myChar in entrance)
                 {
-                    if (myChar == '0' || myChar == '1' || myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '7' || myChar == '8' || myChar == '9' || myChar == ',')
+                    if (myChar == '0' || myChar == '1' || myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '7' || myChar == '8' || myChar == '9' || myChar == ',' )
                     {
                         exit = exit + myChar;
+                    }
+                    if(myChar == '.')
+                    {
+                        exit = exit + ',';
                     }
                 }
             

@@ -143,7 +143,9 @@ namespace Steam_Investor_App.Views
             {
                 overAllProfit = overAllProfit + Convert.ToDouble(item.profitXaml.Content);
                 overAllProfitWithTaxes = overAllProfitWithTaxes + Convert.ToDouble(item.profitWithTaxesXaml.Content);
-                total = Convert.ToDouble(item.buyPriceXaml.Content) + Convert.ToDouble(item.profitXaml.Content);
+                total = total + Convert.ToDouble(FormatDouble(item.itemPrice));
+
+
             }
             if (ItemList.Children.Count == 0)//if there are no items then:
             {
@@ -180,6 +182,28 @@ namespace Steam_Investor_App.Views
             }
         
             
+        }
+        public string FormatDouble(string entrance)
+        {
+            string exit = "";
+
+            foreach (char myChar in entrance)
+            {
+                if (myChar == '0' || myChar == '1' || myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '7' || myChar == '8' || myChar == '9' || myChar == ',' )
+                {
+                    exit = exit + myChar;
+                }
+                if (myChar == '.')
+                {
+                    exit = exit + ',';
+                }
+            }
+
+
+
+
+
+            return exit;
         }
 
         #region Char;

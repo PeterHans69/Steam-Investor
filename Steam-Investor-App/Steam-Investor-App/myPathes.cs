@@ -15,7 +15,7 @@ namespace Steam_Investor_App
 
         //public static string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); //For installing the app
 
-        //public static string MySteamItems = path + "\\MySteamItems.json";//For installing the app
+       //public static string MySteamItems = path + "\\MySteamItems.json";//For installing the app
 
 
 
