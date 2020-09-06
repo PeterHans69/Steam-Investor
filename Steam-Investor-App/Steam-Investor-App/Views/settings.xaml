@@ -7,33 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Width="1000" Height="800" Foreground="#FF273C75">
     <Grid Background="#FF273C75">
-        <Label Content="Reload all available items:" HorizontalAlignment="Left" Margin="5,20,0,0" VerticalAlignment="Top" Width="283" Foreground="#FFDCDDE1" FontSize="24" VerticalContentAlignment="Center" FontStyle="Italic"/>
-        <Button Name="reload"  Content="reload" Height="48" Width="218" Margin="9,70,0,0"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Reload_Click">
-
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Setter Property="Background" Value="#353b48" />
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border x:Name="Border" Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                </Border>
-                                <ControlTemplate.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#2f3640" TargetName="Border" />
-                                    </Trigger>
-                                </ControlTemplate.Triggers>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Button.Style>
-
-        </Button>
-        <ProgressBar Name="ProgressBar" Minimum="0" Maximum="{Binding barMaximum}" Value="{Binding barValue}" HorizontalAlignment="Left" Height="48" Margin="241,69,0,0" VerticalAlignment="Top" Width="500"/>
-        <Label Content="Currency:" HorizontalAlignment="Left" Margin="4,133,0,0" VerticalAlignment="Top" Width="114" Foreground="#FFDCDDE1" FontSize="24" VerticalContentAlignment="Center" FontStyle="Italic" UseLayoutRounding="True"/>
-        <ComboBox Name="CurrencyComboBox" Height="34" SelectedValuePath="Tag" Margin="242,138,0,628" HorizontalAlignment="Left" Width="322" >
+        <Label Content="Currency:" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="114" Foreground="#FFDCDDE1" FontSize="24" VerticalContentAlignment="Center" FontStyle="Italic" UseLayoutRounding="True"/>
+        <ComboBox Name="CurrencyComboBox" Height="42" SelectedValuePath="Tag" Margin="200,30,0,0" HorizontalAlignment="Left" Width="322" VerticalAlignment="Top" VerticalContentAlignment="Center" >
             <ComboBoxItem IsSelected="True" >
                 <StackPanel Orientation="Horizontal">
 
@@ -82,11 +57,11 @@
                     <TextBlock FontSize="20" >JPY</TextBlock>
                 </StackPanel>
             </ComboBoxItem>
-            
-            
-            
-            
-            
+
+
+
+
+
         </ComboBox>
         <Button x:Name="saveButton"  Content="save" Height="48" Width="218" Margin="0,650,0,0"  Foreground="#FFDCDDE1" BorderBrush="{x:Null}" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Click="saveButton_Click">
 

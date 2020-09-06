@@ -129,7 +129,6 @@
     <Compile Include="myPathes.cs" />
     <Compile Include="SteamData\GetSteamItems.cs" />
     <Compile Include="SteamData\MySteamItems.cs" />
-    <Compile Include="SteamData\SteamItem.cs" />
     <Compile Include="ViewClasses\MainClass.cs" />
     <Compile Include="ViewModels\helpViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -206,7 +205,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="SteamData\MySteamItems.json" />
-    <None Include="SteamData\SteamItems.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

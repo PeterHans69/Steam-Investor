@@ -32,14 +32,7 @@ namespace Steam_Investor_App
 
                 InitializeComponent();
                 DataContext = mvm;
-                Task.Run(() => //Check for any new items
-                {
-                   
-                    if (GetSteamItems.checkForNewItems() == true)
-                    {
-                        GetSteamItems.LoadAllItems();//reload all items if there is a new one
-                    }
-                });
+                
 
         }
 

@@ -43,12 +43,7 @@ namespace Steam_Investor_App.Windows
             nameLabel.Foreground = (Brush)bc.ConvertFrom("#f5f6fa");
 
             
-            if (checkName() == false)
-            {
-                nameLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
-                conditionLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
-                everythingIsCorrect = false;
-            }
+            
              if (quantityCheck() == false)
             {
                 quantityLabel.Foreground = (Brush)bc.ConvertFrom("#e84118");
@@ -71,8 +66,8 @@ namespace Steam_Investor_App.Windows
                 string name = ItemNameWPF.Text;
                 string condition = getSelectcetdCondition();
                 var price = GetSteamItems.GetItemPriceForAddItem(name, condition, currency);
-                Debug.WriteLine("price (AddITemClass): " + price.Result);
 
+                
                 if (price.Result != null)
                 {
                     Debug.WriteLine("price (AddITemClass) ist != null");
@@ -91,10 +86,7 @@ namespace Steam_Investor_App.Windows
                     MySteamItems.AddItemToJSON(JsonItem);
                     this.Close();
                 }
-                else
-                {
-                    Debug.WriteLine("price (AddITemClass) ist == null");
-                }
+                
                 
                 
             }
@@ -117,38 +109,7 @@ namespace Steam_Investor_App.Windows
             }
 
         }
-        public bool checkName()
-        {
-            if (ItemNameWPF.Text == "")
-            {
-                return false;
-            }
-            
-            if (getSelectcetdCondition() == "No Condition")
-            {
-                if (SteamItem.searchforItem(ItemNameWPF.Text) == true)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                if (SteamItem.searchforItem(ItemNameWPF.Text + " (" + getSelectcetdCondition() + ")") == true)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-
-
-        }
+        
         public bool checkPriceGoal()
         {
             try
