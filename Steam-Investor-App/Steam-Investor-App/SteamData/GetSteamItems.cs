@@ -12,6 +12,7 @@ namespace Steam_Investor_App.SteamData
 {
     using DocumentFormat.OpenXml.Spreadsheet;
     using Newtonsoft.Json;
+    using Steam_Investor_App.Views;
     using System.Collections.Generic;
     using System.Drawing;
     using System.IO;
@@ -160,9 +161,10 @@ namespace Steam_Investor_App.SteamData
 
             }
             #endregion
-
-            public static async Task<string> GetItemPriceForAddItem(string name, string condition, int currency) //This funktion is only for the AddItem Window! Because of MessageBox.Show();
+            
+            public static async Task<string> GetItemPriceForAddItem(string name, string condition) //This funktion is only for the AddItem Window! Because of MessageBox.Show();
             {
+                int currency = Properties.Settings.Default.Currency;
 
                 HttpResponseMessage responseData = null;
                 GetItemRoot rootObject = null;
@@ -230,9 +232,9 @@ namespace Steam_Investor_App.SteamData
 
 
             static int counter = 0;//debug
-            public static async Task<string> GetItemPrice(string name, string condition, int currency) //This funktion is only for MySteamItems Class! Because of the sleep(3000) instead of ;
+            public static async Task<string> GetItemPrice(string name, string condition) //This funktion is only for MySteamItems Class! Because of the sleep(3000) instead of ;
             {
-
+                int currency = Properties.Settings.Default.Currency;
                 HttpResponseMessage responseData = null;
                 GetItemRoot rootObject = null;
                 while (true)

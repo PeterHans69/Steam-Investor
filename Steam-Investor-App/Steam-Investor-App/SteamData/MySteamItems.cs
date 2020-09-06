@@ -15,12 +15,12 @@ namespace Steam_Investor_App.SteamData
     public static class MySteamItems
     {
 
-        static int currency = Properties.Settings.Default.Currency;
+        
         static List<SteamItemJson> mySteamItems;
         
         public static void AddItemToJSON(SteamItemJson item)
         {
-             currency = Properties.Settings.Default.Currency;
+            
             var fileContent = File.ReadAllText(MyPathes.MySteamItems);
             try
             {
@@ -68,7 +68,7 @@ namespace Steam_Investor_App.SteamData
 
         public static Task UpdateAllItems()
         {
-            currency = Properties.Settings.Default.Currency;
+            
             List<SteamItemJson> myNewSteamItems = new List<SteamItemJson>();
             
             var fileContent = File.ReadAllText(MyPathes.MySteamItems);
@@ -84,7 +84,7 @@ namespace Steam_Investor_App.SteamData
             {
                 foreach (SteamItemJson item in mySteamItems)
                 {
-                   Task.Run(async () => item.itemPrice = await GetSteamItems.GetItemPrice(item.itemName, item.itemCondition, currency)).Wait();
+                   Task.Run(async () => item.itemPrice = await GetSteamItems.GetItemPrice(item.itemName, item.itemCondition)).Wait();
                   
                 }
                 var jsonResult = JsonConvert.SerializeObject(mySteamItems);

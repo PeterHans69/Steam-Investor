@@ -62,10 +62,10 @@ namespace Steam_Investor_App.Windows
             
             if(everythingIsCorrect == true)
             {
-                int currency = 3;//I made this variables, to avoid the Exception that this thread is used by another process
+                
                 string name = ItemNameWPF.Text;
                 string condition = getSelectcetdCondition();
-                var price = GetSteamItems.GetItemPriceForAddItem(name, condition, currency);
+                var price = GetSteamItems.GetItemPriceForAddItem(name, condition);
 
                 
                 if (price.Result != null)

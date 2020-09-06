@@ -41,7 +41,8 @@ namespace Steam_Investor_App.Views
             loadAllItems();
             loadConclusion();
             updateCharData();
-            CartesianMonth();                       
+            CartesianMonth();
+            
         }
         //Cartesian chart
 
@@ -68,7 +69,7 @@ namespace Steam_Investor_App.Views
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
-            InitializeComponent(); 
+            
             loadAllItems();
             loadConclusion();
             updateCharData();
@@ -143,7 +144,27 @@ namespace Steam_Investor_App.Views
             {
                 overAllProfit = overAllProfit + Convert.ToDouble(item.profitXaml.Content);
                 overAllProfitWithTaxes = overAllProfitWithTaxes + Convert.ToDouble(item.profitWithTaxesXaml.Content);
-                total = total + Convert.ToDouble(FormatDouble(item.itemPrice));
+                
+                for(int i =1; i <= item.itemQuantity; i++)
+                {
+                    if (Properties.Settings.Default.Currency == 5)
+                    {
+                        total = total + Convert.ToDouble(FormatDoubleRUB(item.itemPrice));
+                    }
+                    else
+                    {
+                        Debug.WriteLine("quantity: " + item.itemQuantity);
+                        if (item.itemPrice.Contains("pуб."))
+                        {
+                            total = total + Convert.ToDouble(FormatDoubleRUB(item.itemPrice));
+                        }
+                        else
+                        {
+                            total = total + Convert.ToDouble(FormatDouble(item.itemPrice));
+                        }
+                        
+                    }
+                }
 
 
             }
@@ -197,6 +218,25 @@ namespace Steam_Investor_App.Views
                 {
                     exit = exit + ',';
                 }
+            }
+
+
+
+
+
+            return exit;
+        }
+        public string FormatDoubleRUB(string entrance)
+        {
+            string exit = "";
+
+            foreach (char myChar in entrance)
+            {
+                if (myChar == '0' || myChar == '1' || myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '7' || myChar == '8' || myChar == '9' || myChar == ',')
+                {
+                    exit = exit + myChar;
+                }
+                
             }
 
 
