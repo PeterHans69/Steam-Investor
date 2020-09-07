@@ -57,6 +57,12 @@
                     <TextBlock FontSize="20" >JPY</TextBlock>
                 </StackPanel>
             </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock FontSize="20" >VND</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
 
 
 

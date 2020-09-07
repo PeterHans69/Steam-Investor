@@ -39,9 +39,7 @@ namespace Steam_Investor_App.Views
         {
             InitializeComponent();
             loadAllItems();
-            loadConclusion();
-            updateCharData();
-            CartesianMonth();
+            
             
         }
         //Cartesian chart
@@ -123,10 +121,15 @@ namespace Steam_Investor_App.Views
 
                     refresh.Content = "refresh";
                     refresh.IsEnabled = true;
+                    loadMySteamItems();
+                    loadConclusion();
+                    updateCharData();
+                    CartesianMonth();
                 });
-
+                
             }).Start();
-            loadMySteamItems();
+            
+
         }
 
 
@@ -157,6 +160,10 @@ namespace Steam_Investor_App.Views
                         if (item.itemPrice.Contains("pуб."))
                         {
                             total = total + Convert.ToDouble(FormatDoubleRUB(item.itemPrice));
+                        }
+                        if (item.itemPrice.Contains("₫"))
+                        {
+                            total = total + Convert.ToDouble(FormatDoubleVND(item.itemPrice));
                         }
                         else
                         {
@@ -242,6 +249,21 @@ namespace Steam_Investor_App.Views
 
 
 
+
+            return exit;
+        }
+        public string FormatDoubleVND(string entrance)
+        {
+            string exit = "";
+
+            foreach (char myChar in entrance)
+            {
+                if (myChar == '0' || myChar == '1' || myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '7' || myChar == '8' || myChar == '9' || myChar == ',')
+                {
+                    exit = exit + myChar;
+                }
+
+            }
 
             return exit;
         }

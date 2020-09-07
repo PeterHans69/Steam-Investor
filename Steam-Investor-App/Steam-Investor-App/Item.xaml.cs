@@ -44,14 +44,19 @@ namespace Steam_Investor_App
             currrentPriceXaml.Content = price;
             itemPrice = price;
             double profit = 0;
+            
             if (price.Contains("pуб."))//if its russian
             {
                  profit = Convert.ToDouble(FormatDoubleRUB(price)) - Convert.ToDouble(buyPrice);
             }
+            if (price.Contains("₫"))
+            {
+                profit = Convert.ToDouble(FormatDoubleVND(price)) - Convert.ToDouble(buyPrice);
+            }
             else
             {
                 Debug.WriteLine("price: " + price);
-                 profit = Convert.ToDouble(FormatDouble(price)) - Convert.ToDouble(buyPrice);
+                profit = Convert.ToDouble(FormatDouble(price)) - Convert.ToDouble(buyPrice);
             }
             double d_quantity = Convert.ToDouble(quantity);
             profitXaml.Content = Math.Round(profit*d_quantity, 2) ;
@@ -124,7 +129,7 @@ namespace Steam_Investor_App
                     exit = exit + ',';
                 }
             }
-            
+            Debug.WriteLine("Self Converted Number" + exit);
             return exit;
         }
         public string FormatDoubleRUB(string entrance)
@@ -146,6 +151,23 @@ namespace Steam_Investor_App
 
             return exit;
         }
+        public string FormatDoubleVND(string entrance)
+        {
+            string exit = "";
+
+            foreach (char myChar in entrance)
+            {
+                if (myChar == '0' || myChar == '1' || myChar == '2' || myChar == '3' || myChar == '4' || myChar == '5' || myChar == '6' || myChar == '7' || myChar == '8' || myChar == '9' || myChar == ',')
+                {
+                    exit = exit + myChar;
+                }
+
+            }
+
+            return exit;
+        }
+
+
 
         public double FormatProfitWithTaxes(double _entrance) //So I dont have 3 	position after decimal point
         {

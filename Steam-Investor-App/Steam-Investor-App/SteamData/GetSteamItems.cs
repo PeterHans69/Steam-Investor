@@ -88,7 +88,7 @@ namespace Steam_Investor_App.SteamData
             private const string BASE_URL = "https://steamcommunity.com/market/search/render/?search_descriptions=0&sort_column=default&sort_dir=desc&appid=730&norender=1&count=100&start=";
 
             public static bool isLoadingItems = false;
-            public static void LoadAllItemsFromSteam() //async Task
+            public static void LoadAllItemsFromSteam() //Not needed anymore
             {
 
 
@@ -235,7 +235,8 @@ namespace Steam_Investor_App.SteamData
             public static async Task<string> GetItemPrice(string name, string condition) //This funktion is only for MySteamItems Class! Because of the sleep(3000) instead of ;
             {
                 int currency = Properties.Settings.Default.Currency;
-                HttpResponseMessage responseData = null;
+                
+                string ItemUrl;
                 GetItemRoot rootObject = null;
                 while (true)
                 {
@@ -245,14 +246,16 @@ namespace Steam_Investor_App.SteamData
                     {
                         if (condition != "No Condition")
                         {
-                            responseData = httpClient.GetAsync("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name + " " + "(" + condition + ")").Result;
+                            ItemUrl = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name + " " + "(" + condition + ")";
+                            
                         }
                         else
                         {
-                            responseData = httpClient.GetAsync("https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name).Result;
-
+                            ItemUrl = "https://steamcommunity.com/market/priceoverview/?appid=730&currency=" + currency + "&market_hash_name=" + name;
+                            
                         }
-
+                        Debug.WriteLine("loading price from " + name + " Url:" + ItemUrl);
+                        HttpResponseMessage responseData = httpClient.GetAsync(ItemUrl).Result;
                         var body = responseData.Content.ReadAsStringAsync().Result;
                         rootObject = JsonConvert.DeserializeObject<GetItemRoot>(body);
                     }
