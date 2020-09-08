@@ -27,10 +27,11 @@ namespace Steam_Investor_App
         string url;
         public string itemPrice;
         public int itemQuantity;
-        public Item(string name, string condition,string quantity,string buyPrice, string priceGoal, string price)
+        public Item(string name, string condition,string quantity,string _buyPrice, string priceGoal, string price)
         {
+            double buyPrice = Convert.ToDouble(_buyPrice);
             InitializeComponent();
-
+            double currentPrice;
             priceGoalXaml.Content = priceGoal;
             itemNameXaml.Content = name;
             conditionXaml.Content = "";
@@ -40,36 +41,33 @@ namespace Steam_Investor_App
             }
             quantityXaml.Content = quantity;
             itemQuantity = Convert.ToInt32(quantity);
-            buyPriceXaml.Content = buyPrice ;
+            buyPriceXaml.Content = _buyPrice;
             currrentPriceXaml.Content = price;
             itemPrice = price;
             double profit = 0;
             
             if (price.Contains("pуб."))//if its russian
             {
-                 profit = Convert.ToDouble(FormatDoubleRUB(price)) - Convert.ToDouble(buyPrice);
+                currentPrice = Convert.ToDouble(FormatDoubleRUB(price));
             }
             if (price.Contains("₫"))
             {
-                profit = Convert.ToDouble(FormatDoubleVND(price)) - Convert.ToDouble(buyPrice);
+                currentPrice = Convert.ToDouble(FormatDoubleVND(price));
             }
             else
             {
-                Debug.WriteLine("price: " + price);
-                profit = Convert.ToDouble(FormatDouble(price)) - Convert.ToDouble(buyPrice);
+
+                currentPrice = Convert.ToDouble(FormatDouble(price));
             }
+            profit = currentPrice - Convert.ToDouble(buyPrice);
             double d_quantity = Convert.ToDouble(quantity);
             profitXaml.Content = Math.Round(profit*d_quantity, 2) ;
-            double taxes = profit / 100 * 15;
+            double taxes = currentPrice  / 100 * 15;
             double profitWithTaxes;
-            if (profit >= 0)
-            {
-                 profitWithTaxes = Math.Round((profit - taxes) * d_quantity, 2);
-            }
-            else
-            {
-                profitWithTaxes = Math.Round((profit + taxes) * d_quantity, 2);
-            }
+            
+            profitWithTaxes = Math.Round((Math.Round(currentPrice - taxes, 2) - buyPrice) * d_quantity,2);
+            
+            
             
             profitWithTaxesXaml.Content = profitWithTaxes ;
             
