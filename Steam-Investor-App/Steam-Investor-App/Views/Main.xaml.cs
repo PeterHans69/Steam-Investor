@@ -294,7 +294,7 @@ namespace Steam_Investor_App.Views
             {
                 if (d != 0)
                 {
-                    CharData_2[counter] = d;
+                    CharData_2[counter] = Math.Round(d, 2);
                     counter++; 
                 }
             }
