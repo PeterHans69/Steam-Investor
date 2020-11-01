@@ -9,7 +9,7 @@ Join the [Discord](https://discord.gg/x4kuTWW) if you have any questions or prob
 * copy the files back to the `Steam Investor`folder
   * Go to local files\Programms(86)\Shynex Company\Steam Investor
   * drag the files you have just put on your desktop back to the `Steam Investor`folder
-
+s
 
 # For The programmers
 I know the code is messy, its my first project I have ever ended.
